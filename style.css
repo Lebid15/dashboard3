@@ -2,9 +2,13 @@
 
 :root {
 
-  --main-color: linear-gradient(90deg, rgb(29, 36, 0) 0%, rgb(46, 47, 51) 0%, rgb(18, 19, 22) 100%);
+  /* --main-color: linear-gradient(90deg, rgb(29, 36, 0) 0%, rgb(46, 47, 51) 0%, rgb(18, 19, 22) 100%);
   --main-color-header: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(46, 47, 51) 0%, rgb(46, 47, 51) 100%);
-  --hover-color:#1e2424;
+  --hover-color:#1e2424; */
+
+  --main-color: rgb(18, 19, 22);
+  --main-color-header: rgb(18, 19, 22);
+  --hover-color:#b3a700;
 
   /* --main-color: linear-gradient(90deg, rgb(29, 36, 0) 0%, rgb(34, 50, 48) 0%, rgb(52, 75, 78) 100%);
   --main-color-header: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(34, 50, 48) 0%, rgb(34, 50, 48) 100%);
