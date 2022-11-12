@@ -28,7 +28,9 @@
 
 }
 
-
+body {
+  background-color: var(--c5);
+}
 
 
 
@@ -67,7 +69,7 @@
 /*الايقونات كاملة*/
 .sidebar-menu li {
   width: 100%;
-  border-bottom: 1px solid var(--c4);
+  /* border-bottom: 1px solid var(--c4); */
 }
 
 /*الايقونات كاملة بداخلها النصوص*/
