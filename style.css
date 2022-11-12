@@ -4,7 +4,7 @@
   --c1: #111B21;
 
   /***** header and sidebar and my logo >>> text ******/
-  --c2: #e7e7e7;
+  --c2: #ffffff;
 
   /***** sidebar >>> hover ******/
   --c3: #222E35;
@@ -15,20 +15,23 @@
   /**** main >>> background *****/
   --c5: #222E35;
 
-  /**** text >>> very dark *****/
-  --c6: #b8b8b8;
+  /**** text >>> very light *****/
+  --c6: #ffffff;
 
-  /**** text >>> little dark text *****/
+  /**** text >>> little light text *****/
   --c7: #c4c4c4;
 
-  /***** single cards >>> hover ******/
-  --c8: #3b474c;
+  /***** single cards >>> background ******/
+  --c8: #1d282ca4;
 
-  /***** single cards >>> borders ******/
+  /***** single cards  >>> borders ******/
   --c9: #505c61;
 
-  /***** single cards >>> borders ******/
+  /***** single cards p and user-wrapper small>>> borders ******/
   --c10: #00cda8;
+
+  /***** single cards and balance and account ID >>> hover ******/
+  --c11: #323a3e;
 
 
 
@@ -75,14 +78,15 @@ body {
 .sidebar-brand p {
   display: flex;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .sidebar-brand span {
   display: flex;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: rgb(0, 255, 229);
+  padding-top: 5px;
 }
 
 /*الايقونات كاملة*/
@@ -99,7 +103,8 @@ body {
   padding-bottom: 1rem;
   display: block;
   color: var(--c2);
-  font-size: 0.98rem;
+  font-size: 1rem;
+  align-items: center;
 }
 
 .sidebar-menu a:hover {
@@ -108,7 +113,7 @@ body {
 
 
 .sidebar-menu a span:first-child {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   padding-left: 1rem;
   padding-top: 5px;
 }
@@ -258,6 +263,7 @@ main .notes {
   display: flex;
   justify-content: space-between;
   border: 1px solid var(--c9);
+  background-color: var(--c8);
   padding: 1rem;
   border-radius: 10px;
 }
@@ -269,11 +275,11 @@ main .notes {
 }
 
 .card-single:hover {
-  background-color: var(--c8);
+  background-color: var(--c11);
 }
 
-.card-single h1 {
-  color: var(--c6);
+.card-single span {
+  color: var(--c6) !important;
   font-size: 1.1rem;
 }
 
@@ -300,6 +306,7 @@ main .notes {
   display: flex;
   justify-content: space-between;
   border: 1px solid var(--c9);
+  background-color: var(--c8);
   padding: 0.5rem;
   border-radius: 10px;
   justify-content: space-between;
@@ -307,7 +314,7 @@ main .notes {
 }
 
 .card-single-categories:hover {
-  background-color: var(--c8);
+  background-color: var(--c11);
 }
 
 .card-single-categories p {
