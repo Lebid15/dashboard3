@@ -1,5 +1,4 @@
 
-
 :root {
 
   /**** header and sidebar and my logo >>> background ******/
@@ -12,7 +11,7 @@
   --c3: #222E35;
 
   /**** sidebar >>> button borders ******/
-  --c4: #222E35;
+  --c4: #111B21;
 
   /**** main >>> background *****/
   --c5: #222E35;
@@ -26,10 +25,20 @@
   /***** single cards >>> hover ******/
   --c8: #3b474c;
 
+  /***** single cards >>> borders ******/
+  --c9: #505c61;
+
+  /***** single cards >>> borders ******/
+  --c10: #00cda8;
+
+
+
 }
 
 
-
+body {
+  background-color: var(--c1) !important;
+}
 
 
 
@@ -57,11 +66,26 @@
 }
 
 .sidebar-brand {
+  display: flex;
+  text-align: center;
   height: 93.6px;
   padding: 1rem 2rem 1rem 0rem;
   color: var(--c2);
   background: var(--c1);
   font-size: 0.7rem;
+}
+
+.sidebar-brand p {
+  display: flex;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.sidebar-brand span{
+  display: flex;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(0, 255, 229);
 }
 
 /*الايقونات كاملة*/
@@ -111,7 +135,7 @@
 }
 
 
-#nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked+.sidebar .sidebar-brand p span:last-child,
 #nav-toggle:checked+.sidebar li a span:last-child {
   display: none;
 }
@@ -149,8 +173,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  box-shadow: rgba(26, 17, 17, 0.1) 0px 4px 0px;
-  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+  box-shadow: rgba(140, 140, 150, 0.1) 0px 1px 0px;
   border-right: 1px solid var(--c4);
   position: fixed;
   right: 345px;
@@ -179,6 +202,14 @@ header label span {
   padding-top: 9px;
   color: var(--c2);
   cursor: pointer;
+}
+
+header h2 p {
+  text-align: center;
+  padding-left: 0rem;
+  font-size: 0.9rem;
+  color: var(--c2);
+  font-weight: 500;
 }
 
 /*search*/
@@ -226,10 +257,17 @@ header label span {
   padding: 0px 5px;
 } */
 
-.user-wrapper h4 {
-  font-size: 15px !important;
+.user-wrapper p {
+  font-size: 0.85rem !important;
+  /* letter-spacing: 1px; */
+  text-align: center;
+  color: var(--c7);
+}
+.user-wrapper small {
+  font-size: 0.9rem !important;
   letter-spacing: 1px;
   text-align: center;
+  color: var(--c10);
 }
 
 .card-single-categories img {
@@ -251,6 +289,7 @@ main {
   background: var(--c5);
   /*خلفية المحتوى*/
   min-height: calc(100vh - 90px);
+  color: var(--c2);
 }
 
 .cards {
@@ -263,16 +302,22 @@ main {
 main .notes {
   margin-top: 70px;
   letter-spacing: .5px;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: var(--c6);
 }
 
 .card-single {
   display: flex;
   justify-content: space-between;
-  border: 1px solid var(--c6);
+  border: 1px solid var(--c9);
   padding: 1rem;
   border-radius: 10px;
+}
+
+.card-single p {
+  display: block;
+  color: var(--c10);
+  font-size: 1.3rem;
 }
 
 .card-single:hover {
@@ -306,7 +351,7 @@ main .notes {
 .card-single-categories {
   display: flex;
   justify-content: space-between;
-  border: 1px solid var(--c6);
+  border: 1px solid var(--c9);
   padding: 0.5rem;
   border-radius: 10px;
   justify-content: space-between;
@@ -317,9 +362,9 @@ main .notes {
   background-color: var(--c8);
 }
 
-.card-single-categories h1 {
+.card-single-categories p {
   color: var(--c6);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .card-single-categories div:first-child span {
@@ -364,7 +409,7 @@ main .notes {
     padding-right: 0rem;
   }
 
-  .sidebar .sidebar-brand h2 span:last-child,
+  .sidebar .sidebar-brand p span:last-child,
   .sidebar li a span:last-child {
     display: none;
   }
@@ -482,7 +527,7 @@ main .notes {
     padding-right: 1rem;
   }
 
-  #nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
+  #nav-toggle:checked+.sidebar .sidebar-brand p span:last-child,
   #nav-toggle:checked+.sidebar li a span:last-child {
     display: inline;
   }
