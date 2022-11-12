@@ -22,10 +22,10 @@
   --c7: #c4c4c4;
 
   /***** single cards >>> background ******/
-  --c8: #1d282ca4;
+  --c8: #1d232ca4;
 
   /***** single cards  >>> borders ******/
-  --c9: #505c61;
+  --c9: #505761;
 
   /***** single cards p and user-wrapper small>>> borders ******/
   --c10: #00cda8;
@@ -330,6 +330,64 @@ main .notes {
 /****************/
 /****************/
 /****************/
+
+.banks-header {
+  margin-top: 70px;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.cards-banks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card-single-banks {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--c9);
+  background-color: var(--c8);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.card-single-banks p {
+  display: block;
+  color: var(--c10);
+  font-size: 1.3rem;
+}
+
+.card-single-banks:hover {
+  background-color: var(--c11);
+}
+
+.card-single-banks span {
+  color: var(--c6) !important;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.card-single-banks div:first-child span {
+  color: var(--c7);
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
