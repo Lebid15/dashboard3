@@ -3,30 +3,31 @@
 :root {
 
   /**** header and sidebar and my logo >>> background ******/
-  --c1: #ffffff;
+  --c1: #111B21;
 
   /***** header and sidebar and my logo >>> text ******/
-  --c2: #000000;
+  --c2: #e7e7e7;
 
   /***** sidebar >>> hover ******/
-  --c3: #c5c5c5;
+  --c3: #222E35;
 
   /**** sidebar >>> button borders ******/
-  --c4: #ffffff;
+  --c4: #222E35;
 
   /**** main >>> background *****/
-  --c5: #ffffff;
+  --c5: #222E35;
 
   /**** text >>> very dark *****/
-  --c6: #242424;
+  --c6: #b8b8b8;
 
   /**** text >>> little dark text *****/
-  --c7: #2c3e2d;
+  --c7: #c4c4c4;
 
   /***** single cards >>> hover ******/
-  --c8: #c5c5c5;
+  --c8: #3b474c;
 
 }
+
 
 
 
