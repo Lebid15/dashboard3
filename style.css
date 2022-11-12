@@ -1,32 +1,29 @@
 :root {
 
-  /* --main-color: linear-gradient(90deg, rgb(29, 36, 0) 0%, rgb(46, 47, 51) 0%, rgb(18, 19, 22) 100%);
-  --main-color-header: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(46, 47, 51) 0%, rgb(46, 47, 51) 100%);
-  --hover-color:#1e2424; */
+  /**** header and sidebar and my logo >>> background ******/
+  --c1: #111B21;
 
-  --main-color: rgb(255, 255, 255);
-  --main-color-header: rgb(255, 255, 255);
-  --hover-color: #e09fc2;
+  /***** header and sidebar and my logo >>> text ******/
+  --c2: #e7e7e7;
 
-  /* --main-color: linear-gradient(90deg, rgb(29, 36, 0) 0%, rgb(34, 50, 48) 0%, rgb(52, 75, 78) 100%);
-  --main-color-header: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(34, 50, 48) 0%, rgb(34, 50, 48) 100%);
-  --hover-color:#7d7e51; */
+  /***** sidebar >>> hover ******/
+  --c3: #222E35;
 
-  /* --main-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(30, 86, 83) 0%, rgb(2, 12, 12) 100%);
-  --main-color-header: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(30, 86, 83) 0%, rgb(30, 86, 83) 100%); */
-  /*hover one*/
-  /* --hover-color:#847a31;   */
-  /*hover two */
-  /* --hover-color:#0d3f3e;   */
+  /**** sidebar >>> button borders ******/
+  --c4: #222E35;
 
-  /* --main-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(59,175,169,1) 0%, rgba(28,149,162,1) 100%);
-  --main-color-header: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,149,162,1) 0%, rgba(59,175,169,1) 100%);
-  --hover-color:#60a3a2; */
+  /**** main >>> background *****/
+  --c5: #fff;
 
-  --color-dark: #1D2231;
-  --text-grey: #8390A2;
-  --text-white: rgb(221, 221, 221);
-  --text-black: rgb(0, 0, 0);
+  /**** text >>> very dark *****/
+  --c6: #343639;
+
+  /**** text >>> little dark *****/
+  --c7: #005C4B;
+
+  /***** single cards >>> hover ******/
+  --c8: #e7e7e7;
+
 }
 
 * {
@@ -46,38 +43,39 @@
   right: 0;
   top: 0;
   height: 100%;
-  background: var(--main-color);
+  background: var(--c1);
   z-index: 100;
   transition: margin-right 300ms;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar-brand {
-  height: 90px;
+  height: 93.6px;
   padding: 1rem 2rem 1rem 0rem;
-  color: black;
-  /* border-bottom: 1px solid var(--text-grey); */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: var(--c2);
+  background: var(--c1);
+  font-size: 0.7rem;
 }
 
+/*الايقونات كاملة*/
 .sidebar-menu li {
-  /*الايقونات كاملة*/
   width: 100%;
-  /* border-bottom: 1px solid rgb(74, 74, 74); */
+  border-bottom: 1px solid var(--c4);
 }
 
+/*الايقونات كاملة بداخلها النصوص*/
 .sidebar-menu a {
-  /*الايقونات كاملة بداخلها النصوص*/
+
   padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 1.1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 1rem;
   display: block;
-  color: black;
-  font-size: 1.1rem;
+  color: var(--c2);
+  font-size: 0.98rem;
 }
 
 .sidebar-menu a:hover {
-  background-color: var(--hover-color);
+  background-color: var(--c3);
 }
 
 
@@ -139,12 +137,14 @@
 
 /* header */
 header {
-  background: var(--main-color-header);
-  color: white;
+  background: var(--c1);
+  color: var(--c2);
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(26, 17, 17, 0.1) 0px 4px 0px;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+  border-right: 1px solid rgb(131, 131, 131);
   position: fixed;
   right: 345px;
   width: calc(100% - 345px);
@@ -159,16 +159,18 @@ header {
 
 header h2 {
   display: flex;
-  color: black;
-  font-size: 1.1rem;
+  color: var(--c2);
+  font-size: 0.98rem;
+  align-items: center;
 }
 
-
+/*الثلث شخطات فوق بعض*/
 header label span {
-  /*الثلث شخطات فوق بعض*/
+
   font-size: 2.5rem;
   padding-left: 0.7rem;
-  color: black;
+  padding-top: 9px;
+  color: var(--c2);
   cursor: pointer;
 }
 
@@ -239,7 +241,7 @@ main {
   direction: rtl;
   margin-top: 85px;
   padding: 2rem 1.5rem;
-  background: #ffffff;
+  background: var(--c5);
   /*خلفية المحتوى*/
   min-height: calc(100vh - 90px);
 }
@@ -255,28 +257,28 @@ main .notes {
   margin-top: 70px;
   letter-spacing: .5px;
   font-size: 1.1rem;
-  color: #565b63;
+  color: var(--c6);
 }
 
 .card-single {
   display: flex;
   justify-content: space-between;
-  border: 1px solid rgb(22, 130, 140);
+  border: 1px solid var(--c6);
   padding: 1rem;
   border-radius: 10px;
 }
 
 .card-single:hover {
-  background-color: rgb(229, 253, 251);
+  background-color: var(--c8);
 }
 
 .card-single h1 {
-  color: rgb(67, 98, 101);
+  color: var(--c6);
   font-size: 1.1rem;
 }
 
 .card-single div:first-child span {
-  color: var(--text-grey);
+  color: var(--c7);
   font-size: 1rem;
 }
 
@@ -297,7 +299,7 @@ main .notes {
 .card-single-categories {
   display: flex;
   justify-content: space-between;
-  border: 1px solid rgb(22, 130, 140);
+  border: 1px solid var(--c6);
   padding: 0.5rem;
   border-radius: 10px;
   justify-content: space-between;
@@ -305,16 +307,16 @@ main .notes {
 }
 
 .card-single-categories:hover {
-  background-color: rgb(229, 253, 251);
+  background-color: var(--c8);
 }
 
 .card-single-categories h1 {
-  color: rgb(67, 98, 101);
+  color: var(--c6);
   font-size: 1rem;
 }
 
 .card-single-categories div:first-child span {
-  color: var(--text-grey);
+  color: var(--c6);
   font-size: 1rem;
 }
 
@@ -421,13 +423,13 @@ main .notes {
   header h2 label {
     display: inline-block;
     text-align: center;
-    background: var(--main-color);
+    background: var(--c1);
     padding-left: 0rem;
     margin-left: 1rem;
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    color: #fff;
+    color: var(--c2);
     display: flex;
     align-items: center;
     justify-content: center !important;
@@ -436,6 +438,7 @@ main .notes {
   header h2 span {
     text-align: center;
     padding-left: 0rem;
+    padding-top: 0px !important;
   }
 
   header h2 .headerTitle {
