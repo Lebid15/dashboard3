@@ -1,4 +1,3 @@
-
 :root {
 
   /**** header and sidebar and my logo >>> background ******/
@@ -35,11 +34,9 @@
 
 }
 
-
 body {
   background-color: var(--c1) !important;
 }
-
 
 
 * {
@@ -81,7 +78,7 @@ body {
   font-size: 1.1rem;
 }
 
-.sidebar-brand span{
+.sidebar-brand span {
   display: flex;
   text-align: center;
   font-size: 2rem;
@@ -91,7 +88,7 @@ body {
 /*الايقونات كاملة*/
 .sidebar-menu li {
   width: 100%;
-  border-bottom: 1px solid var(--c4);
+  /* border-bottom: 1px solid var(--c4); */
 }
 
 /*الايقونات كاملة بداخلها النصوص*/
@@ -212,50 +209,6 @@ header h2 p {
   font-weight: 500;
 }
 
-/*search*/
-/***********************************/
-/* .search-wrapper {
-  border: 1px solid var(--text-white);
-  border-radius: 30px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  overflow-x: hidden;
-}
-
-.search-wrapper span {
-  display: inline-block;
-  padding: 0rem 1rem;
-  font-size: 1.5rem;
-}
-
-.search-wrapper input {
-  background-color: var(--main-color);
-  color: var(--text-white);
-  height: 100%;
-  padding: .1rem;
-  border: none;
-  outline: none;
-  font-size: 1.1rem;
-}
-::placeholder {
-  color: var(--text-white);
-  opacity: 1; /*
-}*/
-
-/* :-ms-input-placeholder {
- color: var(--text-white);
-}
-
-::-ms-input-placeholder {
- color: var(--text-white);
-}  */
-
-/* .user-wrapper {
-  display: flex;
-  align-items: center;
-  padding: 0px 5px;
-} */
 
 .user-wrapper p {
   font-size: 0.85rem !important;
@@ -263,6 +216,7 @@ header h2 p {
   text-align: center;
   color: var(--c7);
 }
+
 .user-wrapper small {
   font-size: 0.9rem !important;
   letter-spacing: 1px;
@@ -274,12 +228,6 @@ header h2 p {
   border-radius: 50%;
   margin-left: 1rem;
 }
-
-/* .user-wrapper small {
-  display: inline-block;
-  color: var(--text-white);
-  font-size: 15px !important;
-} */
 
 /*main*/
 main {
