@@ -33,6 +33,9 @@
   /***** single cards and balance and account ID >>> hover ******/
   --c11: #323a3e;
 
+  /***** banks >>> background ******/
+  --c12: #7b898a;
+
 
 
 }
@@ -250,6 +253,9 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+
 }
 
 main .notes {
@@ -327,17 +333,54 @@ main .notes {
   font-size: 1rem;
 }
 
-/****************/
-/****************/
-/****************/
+/************************/
+/************************/
+/*****banks design*******/
 
-.banks-header {
+.banks {
+  width: 100%;
+  margin: 50px auto;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+
+div.gallery {
+  margin: 5px;
+  float: left;
+  width: 300px;
+  background-color: rgb(96, 118, 120);
+  height: 250px;
+  color: black;
+  font-weight: 700;
+
+}
+
+.divImg {
+  background-color: rgb(255, 255, 255);
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+div.gallery img {
+  width: 170px;
+  height: auto;
+  padding: 5px;
+  justify-content: center;
+}
+
+div.desc {
+  padding: 0 15px;
+  text-align: left;
+}
+
+/* .banks-header {
   margin-top: 70px;
   justify-content: center;
   text-align: center;
 
-}
-
+} */
+/* 
 .cards-banks {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -349,31 +392,34 @@ main .notes {
   display: flex;
   justify-content: space-between;
   border: 1px solid var(--c9);
-  background-color: var(--c8);
+  background-color: var(--c12);
   padding: 1rem;
   border-radius: 10px;
 }
 
-.card-single-banks p {
-  display: block;
-  color: var(--c10);
-  font-size: 1.3rem;
-}
-
-.card-single-banks:hover {
-  background-color: var(--c11);
-}
-
 .card-single-banks span {
-  color: var(--c6) !important;
+  color: black !important;
   font-size: 1.1rem;
   display: block;
+  text-align: left;
+}
+
+.card-single-banks span img {
+  width: 100%;
+}
+
+.card-single-banks .bankName {
+  color: var(--c6) !important;
+  font-size: 1.5rem !important;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .card-single-banks div:first-child span {
   color: var(--c7);
   font-size: 1rem;
-}
+} */
 
 
 
@@ -412,6 +458,11 @@ main .notes {
     width: 70px;
   }
 
+  .cards-banks {
+    grid-template-columns: 100%;
+  }
+
+
   .sidebar .sidebar-brand,
   .sidebar li {
     padding-right: 1rem;
@@ -445,6 +496,10 @@ main .notes {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .cards-banks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .cards-categories {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -461,6 +516,10 @@ main .notes {
 
 @media only screen and (max-width: 768px) {
   .cards {
+    grid-template-columns: 100%;
+  }
+
+  .cards-banks {
     grid-template-columns: 100%;
   }
 
@@ -554,6 +613,10 @@ main .notes {
 
 @media only screen and (max-width: 560px) {
   .cards {
+    grid-template-columns: 100%;
+  }
+
+  .cards-banks {
     grid-template-columns: 100%;
   }
 }
