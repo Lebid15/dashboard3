@@ -239,6 +239,7 @@ header h2 p {
 
 /*main*/
 main {
+  display: block;
   direction: rtl;
   margin-top: 90px;
   padding: 2rem 1.5rem;
@@ -338,21 +339,23 @@ main .notes {
 /*****banks design*******/
 
 .banks {
+  display: inline-block;
   width: 100%;
-  margin: 50px auto;
-  display: block;
-  overflow: hidden;
+  margin-top: 10px;
   text-align: center;
+  justify-content: center;
 }
 
 div.gallery {
-  margin: 5px;
-  float: left;
+  direction: ltr;
+  margin: 10px;
+  display: inline-block;
   width: 300px;
-  background-color: rgb(96, 118, 120);
+  background-color: rgb(91, 138, 134);
   height: 250px;
   color: black;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 17px;
 
 }
 
@@ -374,12 +377,12 @@ div.desc {
   text-align: left;
 }
 
-/* .banks-header {
+.banks-header {
   margin-top: 70px;
   justify-content: center;
   text-align: center;
+}
 
-} */
 /* 
 .cards-banks {
   display: grid;
