@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +14,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Harmattan&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="style.css">
-   <title>test</title>
+   <title>{% block title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -21,68 +23,68 @@
    <!-- side bar section -->
    <div class="sidebar">
       <div class="sidebar-brand">
-         <img src="ahlaLG7.png" alt="logo">
+         <img src="{% static 'ahla/images/ahlaLG7.png' %}" alt="logo">
          <p>أهلا كارد</p>
       </div>
 
       <div class="sidebar-menu">
          <ul>
             <li>
-               <a href="index.html" class="active">
+               <a href="{% url 'index' %}" class="active">
                   <span class="material-symbols-outlined">home</span>
                   <span>الصفحة الرئيسيّة</span>
                </a>
             </li>
             <li>
-               <a href="games.html">
+               <a href="{% url 'games' %}">
                   <span class="material-symbols-outlined">stadia_controller</span>
                   <span>شحن الالعاب</span>
                </a>
             </li>
             <li>
-               <a href="apprecharge.html">
+               <a href="{% url 'apprecharge' %}">
                   <span class="material-symbols-outlined">hub</span>
                   <span>شحن التطبيقات</span>
                </a>
             </li>
             <li>
-               <a href="phonerecharge.html">
+               <a href="{% url 'phonerecharge' %}">
                   <span class="material-symbols-outlined">phone_iphone</span>
                   <span>شحن الجوال</span>
                </a>
             </li>
             <li>
-               <a href="billrecharge.html">
+               <a href="{% url 'billrecharge' %}">
                   <span class="material-symbols-outlined">receipt_long</span>
                   <span>تسديد فواتير</span>
                </a>
             </li>
             <li>
-               <a href="orders.html">
+               <a href="{% url 'orders' %}">
                   <span class="material-symbols-outlined">shopping_cart</span>
                   <span>طلباتي</span>
                </a>
             </li>
             <!-- <li>
-               <a href="transactions">
+               <a href="{% url 'transactions' %}">
                   <span class="material-symbols-outlined">dynamic_feed</span>
                   <span>حركات الحساب</span>
                </a>
             </li> -->
             <li>
-               <a href="profile.html">
+               <a href="{% url 'profile' %}">
                   <span class="material-symbols-outlined">person</span>
                   <span>بروفايلي</span>
                </a>
             </li>
             <!-- <li>
-               <a href="explain">
+               <a href="{% url 'explain' %}">
                   <span class="material-symbols-outlined">key</span>
                   <span>شرح الموقع</span>
                </a>
             </li> -->
             <li>
-               <a href="logout.html">
+               <a href="{% url 'logout' %}">
                   <span class="material-symbols-outlined">logout</span>
                   <span>تسجيل الخروج</span>
                </a>
@@ -100,7 +102,7 @@
             <label for="nav-toggle">
                <span class="material-symbols-outlined">menu</span>
             </label>
-            <p class="headerTitle">الصفحة الرئيسيّة
+            <p class="headerTitle">{% block header %}{% endblock %}
             <p>
 
          </h2>
@@ -114,70 +116,21 @@
       </header>
 
 
-<div class="container">
-
-     <div class="card">
-          <div class="inner-box" id="card">
-               <div class="front-card">
-                    <h2>تسجيل الدخول</h2>
-                    <form>
-                         <input type="email" class="input-box" placeholder="الايميل الخاص بك" required>
-                         <input type="text" class="input-box" placeholder="كلمة السر" required>
-                         <button type="submit" class="submit-btn">دخول</button>
-                         <input type="checkbox"><span>تذكرني</span>
-                         <button type="button" class="btn" onclick="openRegister()">اريد حساب جديد</button>
-                         <a href="">نسيت كلمة المرور</a>
-                    </form>
-               </div>
-
-               <div class="back-card">
-                    <h2>تسجيل جديد</h2>
-                    <form>
-                         <input type="text" class="input-box" placeholder="الاسم الاول" required>
-                         <input type="text" class="input-box" placeholder="الاسم الاخير" required>
-                         <input type="email" class="input-box" placeholder="الايميل الخاص بك" required>
-                         <input type="text" class="input-box" placeholder="كلمة السر" required>
-                         <button type="submit" class="submit-btn">سجل الآن</button>
-                         <input type="checkbox"><span>تذكرني</span>
-                         <button type="button" class="btn" onclick="openLogin()">لدي حساب مسبقا</button>
-                         <a href="">نسيت كلمة المرور</a>
-                    </form>
-               </div>
-
-          </div>
-     </div>
-
-</div>
+      {% block content %}
+      {% endblock %}
 
 
+   </div>
 
-<script>
-     var card = document.getElementById("card");
-     function openRegister() {
-          card.style.transform = "rotateY(-180deg)";
-     }
-
-     function openLogin() {
-          card.style.transform = "rotateY(0deg)";
-     }
-</script>
-</body>
-
-</html>
-
-
-
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-   crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-   integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-   crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-   integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-   crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
 
 
 </body>

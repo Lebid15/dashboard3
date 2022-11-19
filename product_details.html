@@ -114,57 +114,20 @@
       </header>
 
 
-<div class="container">
 
-     <div class="card">
-          <div class="inner-box" id="card">
-               <div class="front-card">
-                    <h2>تسجيل الدخول</h2>
-                    <form>
-                         <input type="email" class="input-box" placeholder="الايميل الخاص بك" required>
-                         <input type="text" class="input-box" placeholder="كلمة السر" required>
-                         <button type="submit" class="submit-btn">دخول</button>
-                         <input type="checkbox"><span>تذكرني</span>
-                         <button type="button" class="btn" onclick="openRegister()">اريد حساب جديد</button>
-                         <a href="">نسيت كلمة المرور</a>
-                    </form>
+<main>
+     <!-- <div class="cards-categories">
+          {% for x in products %}
+          <div class="card-single-categories">
+               <div>
+                    <p>{{x.title}} {{x.amount}} {{x.unit}}</p>
+                    <p>شراء: {{x.price_to_buy}} {{x.currency}}</p>
+                    <p>مبيع: {{x.price_to_sell}} {{x.currency}}</p>
                </div>
-
-               <div class="back-card">
-                    <h2>تسجيل جديد</h2>
-                    <form>
-                         <input type="text" class="input-box" placeholder="الاسم الاول" required>
-                         <input type="text" class="input-box" placeholder="الاسم الاخير" required>
-                         <input type="email" class="input-box" placeholder="الايميل الخاص بك" required>
-                         <input type="text" class="input-box" placeholder="كلمة السر" required>
-                         <button type="submit" class="submit-btn">سجل الآن</button>
-                         <input type="checkbox"><span>تذكرني</span>
-                         <button type="button" class="btn" onclick="openLogin()">لدي حساب مسبقا</button>
-                         <a href="">نسيت كلمة المرور</a>
-                    </form>
-               </div>
-
           </div>
-     </div>
-
-</div>
-
-
-
-<script>
-     var card = document.getElementById("card");
-     function openRegister() {
-          card.style.transform = "rotateY(-180deg)";
-     }
-
-     function openLogin() {
-          card.style.transform = "rotateY(0deg)";
-     }
-</script>
-</body>
-
-</html>
-
+          {% endfor %}
+     </div> -->
+</main>
 
 
 </div>
