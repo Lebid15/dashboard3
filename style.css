@@ -5,16 +5,16 @@
   /*خلفية السايدبار والهيدر*/
   /* 111B21 */
   /**** main >>> background *********/
-  --main_bg: #73969f;
+  --main_bg: #92b7c1;
   /*خلفية المحتوى بالوسط*/
   /* 222E35 */
 
   /**** text >>> color *****/
-  --c6: #000000;
+  --c6: #182034;
   /**** user name color >>>  text *****/
   --c7: #e4e4e4;
   /***** balance color>>> text ******/
-  --c10: #005f7f;
+  --c10: #01338a;
   /***** header and sidebar and my logo >>> text ******/
   --c2: #ffffff;
   /****** sidebar and logo >>>> text *******/
@@ -112,9 +112,27 @@ body {
   width: 100%;
 }
 
-.sidebar-menu li:hover {
-  width: 100%;
+.sidebar-menu li:after {
+  display: block;
+  content: '';
+  border-bottom: solid 2px rgb(246, 255, 208);  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
 }
+
+.sidebar-menu li:hover::after {
+  transform: scaleX(0.5);
+}
+
+.sidebar-menu li.fromRight:after {
+  transform-origin: 100% 50%;
+}
+
+.sidebar-menu li.fromLeft:after {
+  transform-origin:  0% 100%;
+}
+
+
 
 /*الايقونات كاملة بداخلها النصوص*/
 .sidebar-menu a {
@@ -127,13 +145,20 @@ body {
   align-items: center;
 }
 
-.sidebar-menu a:hover {
-  background-color: var(--main_bg);
+
+
+.sidebar-menu a:hover span {
+  /* background-color: var(--main_bg); */
+  color: rgb(238, 255, 161) !important;
 }
+
+
+
 
 .sidebar-menu span {
   color: var(--c2);
 }
+
 
 
 .sidebar-menu a span:first-child {
@@ -285,20 +310,22 @@ main .notes {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
+  margin: 0 auto;
   margin-top: 1rem;
   justify-content: center;
   align-items: center;
+
 }
 
 .card-single {
   display: flex;
   justify-content: space-between;
   background-color: var(--c8);
-  padding: 2rem 0rem;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.475) 0px 25px 50px -12px;
+  padding: 1.3rem 0rem;
+  border-radius: 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.167) 0px 25px 50px -12px; */
 }
 
 .balanceAndID {
@@ -600,7 +627,7 @@ div.desc {
   height: 91vh;
   margin-top: 9vh;
   font-family: 'Noto Kufi Arabic', sans-serif;
-  background-color: #65dbdf;
+  background-color: var(--main_bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -628,7 +655,7 @@ div.desc {
   height: 100%;
   background-position: center;
   background-size: cover;
-  background: linear-gradient(rgba(88, 149, 152, 0.9), rgba(69, 116, 119, 0.9));
+  background: linear-gradient(rgba(44, 102, 123, 0.9), rgba(37, 81, 91, 0.9));
   padding: 55px;
   box-sizing: border-box;
   backface-visibility: hidden;
