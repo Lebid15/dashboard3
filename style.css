@@ -1,20 +1,22 @@
 :root {
 
   /**** header and sidebar and my logo >>> background ******/
-  --c1: #215364;
+  --c1: #111b21;
   /*خلفية السايدبار والهيدر*/
   /* 111B21 */
   /**** main >>> background *********/
-  --main_bg: #92b7c1;
+  --main_bg: #0B141A;
   /*خلفية المحتوى بالوسط*/
   /* 222E35 */
 
+  --c17: #202C33;
+
   /**** text >>> color *****/
-  --c6: #182034;
+  --c6: #ffffff;
   /**** user name color >>>  text *****/
   --c7: #e4e4e4;
   /***** balance color>>> text ******/
-  --c10: #01338a;
+  --c10: #ffffff;
   /***** header and sidebar and my logo >>> text ******/
   --c2: #ffffff;
   /****** sidebar and logo >>>> text *******/
@@ -31,7 +33,7 @@
 
 
   /***** single cards >>> background ****/
-  --c8: rgba(255, 255, 255, 0.53);
+  --c8: #005C4B;
 
 
 
@@ -41,7 +43,7 @@
   --c9: #394853;
 
   /***** single cards and balance and account ID >>> hover ******/
-  --c11: rgba(255, 255, 255, 0.844);
+  /* --c11: rgba(255, 255, 255, 0.844); */
 
   /***** banks >>> background ******/
   --c12: #394853;
@@ -82,10 +84,10 @@ body {
 .sidebar-brand {
   display: flex;
   text-align: center;
-  height: 93.6px;
+  height: 89px;
   padding: 0rem 1rem 1rem 0rem;
   color: var(--c2);
-  background: var(--c1);
+  background: var(--c17);
   font-size: 0.7rem;
   align-items: center;
   justify-content: right;
@@ -190,7 +192,7 @@ body {
 
 /* header */
 header {
-  background: var(--c1);
+  background: var(--c17);
   color: var(--c2);
   display: flex;
   justify-content: space-between;
@@ -290,6 +292,7 @@ main .notes {
   background-color: var(--c8);
   padding: 1.3rem 0rem;
   border-radius: 10px;
+  cursor: pointer;
   /* box-shadow: rgba(0, 0, 0, 0.167) 0px 25px 50px -12px; */
 }
 
@@ -305,9 +308,6 @@ main .notes {
   font-family: 'Segoe UI Regular' !important;
 }
 
-.card-single:hover {
-  background-color: var(--c11);
-}
 
 .card-single span {
   color: var(--c6) !important;
