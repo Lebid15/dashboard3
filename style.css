@@ -491,6 +491,8 @@ div.desc {
 
   .sidebar {
     right: -100% !important;
+    background-color: rgba(20, 31, 35, 0.673);
+    backdrop-filter: blur(16px);
   }
 
   header h2 {
