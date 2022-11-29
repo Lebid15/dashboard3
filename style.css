@@ -452,7 +452,9 @@ div.gallery img {
     height: auto;
     padding: 5px;
     justify-content: center;
+    transition: .3s ease-in-out;
 }
+
 
 div.desc {
     padding: 0 15px;
@@ -469,46 +471,52 @@ div.desc {
 
 
 /******* game section ******/
+
+
 .game_section{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     grid-gap: 1rem;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .gameElement{
     display: block;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.045);
-    padding: 10px 25px;
-    margin: 40px 20px;
+    /* background-color: rgba(255, 255, 255, 0.045); */
+    padding: 10px 0px;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
     text-align: center;
     cursor: pointer;
-}
-.gameElement:hover{
-    background-color: #005C4B;
-    transition: 0.5s ease-in-out;
+    height: 16vh;
 }
 
 .gameElement p{
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
-.gameElement img{
-    background-color: rgba(255, 255, 255, 0.08);
-    width: 90px;
-    margin-top: -50px;
+
+.gameElement  img{
+    background-color: rgba(255, 255, 255, 0.045);
+    width: 4vw;
+    height: 7vh;
     border-radius: 20px;
-    transition: width 0.5s, height 0.5s, transform 0.5s;
+    -webkit-transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
+    opacity: 0.7;
 }
-.gameElement:hover img{
-    width: 90px;
-    transform: rotate(-30deg);
+
+
+.gameElement .imgAndTitle:hover img {
+    opacity: 1;
+    width: 4.2vw;
+    height: 7.4vh;
 }
+
+
 /**************/
 /**************/
 /*** Media ****/
