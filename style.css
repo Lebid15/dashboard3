@@ -36,8 +36,49 @@
 
     /***** whatsapp color for header just on phone >>> background ******/
     --c13: #ffffff;
+    --color-radius-1: 0.4rem;
 
+}
+.dark-theme-variables{
 
+    /**** header and sidebar and my logo >>> background ******/
+    --c1: #e3f9f8;
+
+    /**** main >>> background *********/
+    --main_bg: #c0f2ec;
+
+    --c17: #97ded6;
+
+    /**** text >>> color *****/
+    --c6: #100f0f;
+    /**** user name color >>>  text *****/
+    --c7: #070707;
+    /***** balance color>>> text ******/
+    --c10: #080808;
+    /***** header and sidebar and my logo >>> text ******/
+    --c2: #121212;
+    /****** sidebar and logo >>>> text *******/
+    --c14: #111010;
+
+    /***** sidebar >>> hover ******/
+    --c3: #6cdbeb;
+
+    /**** sidebar >>> button borders ******/
+    --c4: white(242, 242, 242);
+
+    /***** single cards >>> background ****/
+    --c8: #e3f8f3;
+
+    /***** single cards  >>> borders ******/
+    --c9: #394853;
+
+    /***** banks >>> background ******/
+    --c12: #394853;
+
+    /***** whatsapp color for header just on phone >>> background ******/
+    --c13: #ffffff;
+
+    --border-radius-1: 0.4rem;
 }
 
 body {
@@ -54,6 +95,38 @@ body {
     font-family: 'Noto Kufi Arabic', sans-serif;
     /*نختار خط عربي */
 }
+
+
+.theme-toggler {
+    background-color: var(--main_bg);
+    display: block;
+    justify-content: space-between;
+    height: 1.6rem;
+    width: 2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.theme-toggler span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.theme-toggler span.active {
+    background: rgb(255, 255, 255) !important;
+    color: rgb(3, 23, 35);
+    border-radius: 10px;
+}
+
+
+
 
 .sidebar {
     direction: rtl;
