@@ -45,32 +45,32 @@
 .dark-theme-variables{
 
     /**** header and sidebar and my logo >>> background ******/
-    --c1: linear-gradient(120deg, #dd3e54 0%, #6be585 100%);
+    --c1: linear-gradient(120deg, #b7dfb5 0%, #ffffff 100%);
 
     /**** main >>> background *********/
-    --main_bg: linear-gradient(160deg, #dd3e54 0%, #6be585 100%);
+    --main_bg: linear-gradient(160deg, #b7dfb5 0%, #ffffff 100%);
 
-    --c17: linear-gradient(120deg, #dd3e54 0%, #dd3e54 100%);
+    --c17: linear-gradient(120deg, #b7dfb5 0%, #b7dfb5 100%);
 
     /**** text >>> color *****/
-    --c6: #ffffff;
+    --c6: #000000;
     /**** user name color >>>  text *****/
-    --c7: #ffffff;
+    --c7: #000000;
     /***** balance color>>> text ******/
-    --c10: #ffffff;
+    --c10: #000000;
     /***** header>>> text ******/
-    --c2: #ffffff;
+    --c2: #000000;
     /****** sidebar and logo >>>> text *******/
-    --c14: #ffffff;
+    --c14: #000000;
 
     /***** sidebar >>> hover ******/
     --c3: #6cdbeb;
 
     /**** sidebar >>> button borders ******/
-    --c4: white(242, 242, 242);
+    --c4: white;
 
     /***** single cards >>> background ****/
-    --c8: #ffffff2b;
+    --c8: #ffffff00;
 
     /***** single cards  >>> borders ******/
     --c9: #394853;
@@ -487,8 +487,7 @@ div.desc {
 
 .gameElement{
     display: block;
-    background-color: rgba(255, 255, 255, 0.085);
-    /* background-color: var(--c8); */
+    background-color: var(--c8);
     padding: 10px 0px;
     margin: 20px;
     border-radius: 10px;
@@ -496,6 +495,7 @@ div.desc {
     justify-content: center;
     text-align: center;
     cursor: pointer;
+    height: 15vh;
 }
 
 .gameElement p{
@@ -507,7 +507,7 @@ div.desc {
 }
 
 .gameElement  img{
-    width: 3.5vw;
+    width: 4vw;
     height: 7vh;
     border-radius: 20px;
     -webkit-transition: .3s ease-in-out;
@@ -530,7 +530,7 @@ div.desc {
         grid-template-columns: repeat(6, 1fr);
     }
     .gameElement  img{
-        width: 3.5vw;
+        width: 4vw;
     }
 }
 @media only screen and (max-width: 1600px) {
@@ -538,7 +538,7 @@ div.desc {
         grid-template-columns: repeat(6, 1fr);
     }
     .gameElement  img{
-        width: 5vw;
+        width: 7vw;
     }
 }
 
@@ -559,7 +559,7 @@ div.desc {
         grid-template-columns: repeat(5, 1fr);
     }
     .gameElement  img{
-        width: 5vw;
+        width: 8vw;
     }
 
 
@@ -738,7 +738,7 @@ div.desc {
         grid-template-columns: 100%;
     }
     .game_section{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         width: 90vw;  
     }
 
@@ -759,8 +759,6 @@ div.desc {
         width: 14vw;
         opacity: 1;
     }
-
- 
 
     .cards-banks {
         grid-template-columns: 100%;
