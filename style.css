@@ -9,7 +9,7 @@
     /**** main >>> background *********/
     --main_bg: #0B141A;
 
-    --c17: #202C33;
+    --c17: #233320;
 
     /**** text >>> color *****/
     --c6: #ffffff;
@@ -45,12 +45,12 @@
 .dark-theme-variables{
 
     /**** header and sidebar and my logo >>> background ******/
-    --c1: #e3f9f8;
+    --c1: linear-gradient(120deg, #864305 0%, #d58204 100%);
 
     /**** main >>> background *********/
-    --main_bg: #c0f2ec;
+    --main_bg: linear-gradient(120deg, #864305 0%, #d58204 100%);
 
-    --c17: #97ded6;
+    --c17: linear-gradient(120deg, #864305 0%, #d58204 100%);
 
     /**** text >>> color *****/
     --c6: #100f0f;
@@ -59,7 +59,7 @@
     /***** balance color>>> text ******/
     --c10: #080808;
     /***** header and sidebar and my logo >>> text ******/
-    --c2: #121212;
+    --c2: #ffffff;
     /****** sidebar and logo >>>> text *******/
     --c14: #111010;
 
