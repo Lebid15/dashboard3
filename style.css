@@ -45,19 +45,19 @@
 .dark-theme-variables{
 
     /**** header and sidebar and my logo >>> background ******/
-    --c1: linear-gradient(120deg, #864305 0%, #d58204 100%);
+    --c1: linear-gradient(120deg, #dd3e54 0%, #6be585 100%);
 
     /**** main >>> background *********/
-    --main_bg: linear-gradient(120deg, #864305 0%, #d58204 100%);
+    --main_bg: linear-gradient(160deg, #dd3e54 0%, #6be585 100%);
 
-    --c17: linear-gradient(120deg, #864305 0%, #d58204 100%);
+    --c17: linear-gradient(120deg, #dd3e54 0%, #dd3e54 100%);
 
     /**** text >>> color *****/
-    --c6: #100f0f;
+    --c6: #ffffff;
     /**** user name color >>>  text *****/
-    --c7: #070707;
+    --c7: #ffffff;
     /***** balance color>>> text ******/
-    --c10: #080808;
+    --c10: #ffffff;
     /***** header>>> text ******/
     --c2: #ffffff;
     /****** sidebar and logo >>>> text *******/
@@ -70,7 +70,7 @@
     --c4: white(242, 242, 242);
 
     /***** single cards >>> background ****/
-    --c8: #e3f8f3;
+    --c8: #ffffff2b;
 
     /***** single cards  >>> borders ******/
     --c9: #394853;
@@ -148,10 +148,9 @@ body {
 .sidebar-brand {
     display: flex;
     text-align: center;
-    height: 89px;
+    height: 90px;
     padding: 0rem 1rem 1rem 0rem;
     color: var(--c2);
-    background: var(--c17);
     font-size: 0.7rem;
     align-items: center;
     justify-content: right;
@@ -259,7 +258,7 @@ header {
     color: var(--c2);
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
+    padding: 1.1rem 1.5rem;
     box-shadow: rgba(140, 140, 150, 0.1) 0px 1px 0px;
     border-right: 1px solid var(--c1);
     position: fixed;
@@ -488,7 +487,7 @@ div.desc {
 
 .gameElement{
     display: block;
-    /* background-color: rgba(255, 255, 255, 0.085); */
+    background-color: rgba(255, 255, 255, 0.085);
     /* background-color: var(--c8); */
     padding: 10px 0px;
     margin: 20px;
@@ -688,6 +687,7 @@ div.desc {
         text-align: center;
         padding-left: 0.5rem;
         padding-top: 0px !important;
+
     }
 
     header h2 .headerTitle {

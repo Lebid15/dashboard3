@@ -122,47 +122,50 @@
 
 
       <main>
-         <div class="cards">
-            <div class="card-single">
-               <div class="balanceAndID">
-                  <span>رصيد الحساب</span>
-                  <p>₺155530.22</p>
+         <div class="submain">
+            <div class="cards">
+               <div class="card-single">
+                  <div class="balanceAndID">
+                     <span>رصيد الحساب</span>
+                     <p>₺155530.22</p>
+                  </div>
+               </div>
+               <div class="card-single">
+                  <div class="balanceAndID">
+                     <span>الرقم المميز</span>
+                     <p>A555258584</p>
+                  </div>
                </div>
             </div>
-            <div class="card-single">
-               <div class="balanceAndID">
-                  <span>الرقم المميز</span>
-                  <p>A555258584</p>
-               </div>
+   
+   
+            <!-- هنا حساباتنا البنكية التي سيحول عليها العملاء -->
+            <div class="banks-header ">
+               <p>حساباتنا البنكية</p>
+            </div>
+            <!-- <div class="banks">
+             {% for x in banks %}
+             <div class="gallery">
+                  <div class="divImg">
+                       <img src="{{x.logo.url}}" style="padding-top: 15px;" alt="{{x.title}}">
+                  </div>
+                  <div class="desc">{{x.name}}</div>
+                  <div class="desc">TC: {{x.tc}}</div>
+                  <div class="desc">hisap no: {{x.hesap_no}}</div>
+                  <div class="desc">{{x.iban}}</div>
+             </div>
+             {% endfor %}
+        </div> -->
+   
+   
+            <!-- هنا تنبهات للعملاء وملاحظات -->
+            <div class="notes">
+               <p>
+                  - إذا لاحظت أي صعوبة يمكنك التوجه الى <a>شرح الموقع</a> أو التواصل مع <a>فريق العمل</a>.
+               </p>
             </div>
          </div>
 
-
-         <!-- هنا حساباتنا البنكية التي سيحول عليها العملاء -->
-         <div class="banks-header ">
-            <p>حساباتنا البنكية</p>
-         </div>
-         <!-- <div class="banks">
-          {% for x in banks %}
-          <div class="gallery">
-               <div class="divImg">
-                    <img src="{{x.logo.url}}" style="padding-top: 15px;" alt="{{x.title}}">
-               </div>
-               <div class="desc">{{x.name}}</div>
-               <div class="desc">TC: {{x.tc}}</div>
-               <div class="desc">hisap no: {{x.hesap_no}}</div>
-               <div class="desc">{{x.iban}}</div>
-          </div>
-          {% endfor %}
-     </div> -->
-
-
-         <!-- هنا تنبهات للعملاء وملاحظات -->
-         <div class="notes">
-            <p>
-               - إذا لاحظت أي صعوبة يمكنك التوجه الى <a>شرح الموقع</a> أو التواصل مع <a>فريق العمل</a>.
-            </p>
-         </div>
       </main>
 
 
