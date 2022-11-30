@@ -70,7 +70,7 @@
     --c4: white;
 
     /***** single cards >>> background ****/
-    --c8: #ffffff00;
+    --c8: #ffffff3c;
 
     /***** single cards  >>> borders ******/
     --c9: #394853;
@@ -487,7 +487,7 @@ div.desc {
 
 .gameElement{
     display: block;
-    background-color: var(--c8);
+    /* background-color: var(--c8); */
     padding: 10px 0px;
     margin: 20px;
     border-radius: 10px;
