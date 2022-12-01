@@ -45,12 +45,12 @@
 .dark-theme-variables{
 
     /**** header and sidebar and my logo >>> background ******/
-    --c1: linear-gradient(120deg, #b7dfb5 0%, #ffffff 100%);
+    --c1: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
 
     /**** main >>> background *********/
-    --main_bg: linear-gradient(160deg, #b7dfb5 0%, #ffffff 100%);
+    --main_bg: linear-gradient(160deg, #EFEAE2 0%, #EFEAE2 100%);
 
-    --c17: linear-gradient(120deg, #b7dfb5 0%, #b7dfb5 100%);
+    --c17: linear-gradient(120deg, #00A884 0%, #00A884 100%);
 
     /**** text >>> color *****/
     --c6: #000000;
@@ -70,7 +70,7 @@
     --c4: white;
 
     /***** single cards >>> background ****/
-    --c8: #ffffff3c;
+    --c8: #ffffffac;
 
     /***** single cards  >>> borders ******/
     --c9: #394853;
@@ -659,8 +659,7 @@ div.desc {
 
     .sidebar {
         right: -100% !important;
-        background-color: rgba(20, 31, 35, 0.673);
-        backdrop-filter: blur(16px);
+        background-color: var(--c1);
     }
 
     header h2 {
@@ -758,6 +757,11 @@ div.desc {
     .gameElement img{
         width: 14vw;
         opacity: 1;
+    }
+
+    .theme-toggler {
+        display: flex;
+        margin-right: 3.5rem;
     }
 
     .cards-banks {
