@@ -322,12 +322,11 @@ main {
     display: block;
     direction: rtl;
     margin-top: 90px;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.1rem;
     background: var(--main_bg);
-    /*خلفية المحتوى*/
     min-height: calc(100vh - 90px);
     color: var(--c2);
-
+    /*خلفية المحتوى*/
 }
 
 main .notes {
@@ -517,6 +516,40 @@ div.desc {
 
 .gameElement .imgAndTitle:hover img {
     opacity: 1;
+}
+
+
+/**************/
+/**************/
+/*** ORDERS ****/
+
+.orderSection {
+    /* background-color: red; */
+    display: block;
+    padding: 0rem 0;
+    font-size: 14px;
+}
+
+.orderRow {
+    /* background-color: green; */
+    padding: 0rem 0;
+    border-bottom: 1px solid rgb(109, 109, 109);
+}
+
+.orderInfo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.2rem 0;
+    color: black !important;
+    /* background-color: yellow; */
+}
+
+.orderInfo p {
+    margin: 0.2rem 0.2rem;
+    /* background-color: white; */
+    padding: 0.4rem 0.5rem;
+    border-left: 1px solid rgb(40, 76, 84);
+    line-height: 0.5rem;
 }
 
 
