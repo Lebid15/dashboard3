@@ -2,7 +2,47 @@
 
 
 :root {
+    /**** header and sidebar and my logo >>> background ******/
+    --c1: #ffffff;
 
+    /**** main >>> background *********/
+    --main_bg: #EFEAE2;
+
+    --c17: #00A884;
+
+    /**** text >>> color *****/
+    --c6: #000000;
+    /**** user name color >>>  text *****/
+    --c7: #000000;
+    /***** balance color>>> text ******/
+    --c10: #000000;
+    /***** header>>> text ******/
+    --c2: #000000;
+    /****** sidebar and logo >>>> text *******/
+    --c14: #000000;
+
+    /***** sidebar >>> hover ******/
+    --c3: #6cdbeb;
+
+    /**** sidebar >>> button borders ******/
+    --c4: white;
+
+    /***** single cards >>> background ****/
+    --c8: #ffffffac;
+
+    /***** single cards  >>> borders ******/
+    --c9: #394853;
+
+    /***** banks >>> background ******/
+    --c12: #394853;
+
+    /***** whatsapp color for header just on phone >>> background ******/
+    --c13: #ffffff;
+
+    --border-radius-1: 0.4rem;
+
+}
+.dark-theme-variables{
     /**** header and sidebar and my logo >>> background ******/
     --c1: #111b21;
 
@@ -41,47 +81,6 @@
     --c13: #ffffff;
     --color-radius-1: 0.4rem;
 
-}
-.dark-theme-variables{
-
-    /**** header and sidebar and my logo >>> background ******/
-    --c1: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
-
-    /**** main >>> background *********/
-    --main_bg: linear-gradient(160deg, #EFEAE2 0%, #EFEAE2 100%);
-
-    --c17: linear-gradient(120deg, #00A884 0%, #00A884 100%);
-
-    /**** text >>> color *****/
-    --c6: #000000;
-    /**** user name color >>>  text *****/
-    --c7: #000000;
-    /***** balance color>>> text ******/
-    --c10: #000000;
-    /***** header>>> text ******/
-    --c2: #000000;
-    /****** sidebar and logo >>>> text *******/
-    --c14: #000000;
-
-    /***** sidebar >>> hover ******/
-    --c3: #6cdbeb;
-
-    /**** sidebar >>> button borders ******/
-    --c4: white;
-
-    /***** single cards >>> background ****/
-    --c8: #ffffffac;
-
-    /***** single cards  >>> borders ******/
-    --c9: #394853;
-
-    /***** banks >>> background ******/
-    --c12: #394853;
-
-    /***** whatsapp color for header just on phone >>> background ******/
-    --c13: #ffffff;
-
-    --border-radius-1: 0.4rem;
 }
 
 body {
@@ -703,7 +702,7 @@ div.desc {
     header {
         width: 100% !important;
         right: 0 !important;
-        background-color: var(--c1);
+        background-color: var(--c17);
     }
 
     #nav-toggle:checked+.sidebar {
@@ -768,6 +767,8 @@ div.desc {
         grid-template-columns: 100%;
     }
 }
+/*************************************************/
+
 
 .container {
     width: 100%;
