@@ -538,7 +538,7 @@ div.desc {
         grid-template-columns: repeat(6, 1fr);
     }
     .gameElement  img{
-        width: 7vw;
+        width: 5vw;
     }
 }
 
@@ -559,7 +559,7 @@ div.desc {
         grid-template-columns: repeat(5, 1fr);
     }
     .gameElement  img{
-        width: 8vw;
+        width: 7vw;
     }
 
 
