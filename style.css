@@ -523,7 +523,6 @@ div.desc {
 /*** ORDERS ****/
 
 .orderSection {
-    /* background-color: red; */
     display: block;
     padding: 0rem 0;
     font-size: 14px;
@@ -532,7 +531,6 @@ div.desc {
 .orderRow {
     display: flex;
     padding: 0.5rem;
-    border-bottom: 1px solid rgb(109, 109, 109);
 }
 
 .order1 , .order2 , .order3 {
@@ -541,32 +539,30 @@ div.desc {
     margin: 0 0;
     color: black !important;
     align-items: center;
-    
+    background-color: rgb(255, 255, 255);
 }
 
 .orderRow p {
     font-family: 'Noto Naskh Arabic', serif;
     font-size: 1rem;
-    margin: 1rem 0.2rem;
-    padding: 0.5rem 0.5rem;
-    line-height: 0.5rem;
+    margin: 0.8rem 0.2rem;
+    padding: 0.5rem 0.2rem;
+    line-height: 0.05rem;
 }
 
-.orderRow .order1 img {
-    width: 50px;
-    height: 50px;
+.orderRow .order2 img {
+    width: 45px;
+    height: 40px;
     border-radius: 10px;
-    padding: 0.5rem 0.2rem;
+    padding: 0.05rem 0.2rem;
 }
 
 .orderDetailsMobile {
-    background-color: rgb(255, 255, 255);
-    color:black;
-    padding:0.35rem;border-radius: 15px;
+    color:rgb(27, 95, 255);
 }
 
 .orderDetailsMobileLabel {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 /**************/
