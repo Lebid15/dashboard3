@@ -524,7 +524,6 @@ div.desc {
 
 .orderSection {
     display: block;
-    padding: 0rem 0;
     font-size: 14px;
 }
 
@@ -542,17 +541,18 @@ div.desc {
     background-color: rgb(255, 255, 255);
 }
 
+
 .orderRow p {
-    font-family: 'Noto Naskh Arabic', serif;
-    font-size: 1rem;
-    margin: 0.8rem 0.2rem;
-    padding: 0.5rem 0.2rem;
-    line-height: 0.05rem;
+    /* font-family: Arial, Helvetica, sans-serif */
+    /* font-size: 1rem; */
+    margin: 0.8rem 0.1rem;
+    padding: 0.5rem 0.1rem;
+    line-height: 0.02rem;
 }
 
 .orderRow .order2 img {
-    width: 45px;
-    height: 40px;
+    width: 40px;
+    height: 35px;
     border-radius: 10px;
     padding: 0.05rem 0.2rem;
 }
@@ -564,7 +564,18 @@ div.desc {
 .orderDetailsMobileLabel {
     font-weight: 400;
 }
+.orderPrices {
+    justify-content: space-between;
+}
 
+.orderProfit {
+    /* background:rgb(202, 221, 204);  */
+    color:rgb(192, 0, 218);
+}
+
+.turkLira {
+    color: rgb(0, 94, 255);
+}
 /**************/
 /**************/
 /*** Media ****/
