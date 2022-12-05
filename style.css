@@ -1,91 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap');
 
 :root {
-    /**** header and sidebar and my logo >>> background ******/
-    --c1: #ffffff;
-
-    /**** main >>> background *********/
-    --main_bg: #EFEAE2;
-
-    --c17: #00A884;
-
-    /**** text >>> color *****/
-    --c6: #000000;
-    /**** user name color >>>  text *****/
-    --c7: #000000;
-    /***** balance color>>> text ******/
-    --c10: #000000;
-    /***** header>>> text ******/
-    --c2: #000000;
-    /****** sidebar and logo >>>> text *******/
-    --c14: #000000;
-
-    /***** sidebar >>> hover ******/
-    --c3: #6cdbeb;
-
-    /**** sidebar >>> button borders ******/
-    --c4: white;
-
-    /***** single cards >>> background ****/
-    --c8: #ffffffac;
-
-    /***** single cards  >>> borders ******/
-    --c9: #394853;
-
-    /***** banks >>> background ******/
-    --c12: #394853;
-
-    /***** whatsapp color for header just on phone >>> background ******/
-    --c13: #ffffff;
-
-    --border-radius-1: 0.4rem;
-
-}
-.dark-theme-variables{
-    /**** header and sidebar and my logo >>> background ******/
-    --c1: #111b21;
-
-    /**** main >>> background *********/
-    --main_bg: #0B141A;
-
-    --c17: #202C33;
-
-    /**** text >>> color *****/
-    --c6: #ffffff;
-    /**** user name color >>>  text *****/
-    --c7: #e4e4e4;
-    /***** balance color>>> text ******/
-    --c10: #ffffff;
-    /***** header and sidebar and my logo >>> text ******/
-    --c2: #ffffff;
-    /****** sidebar and logo >>>> text *******/
-    --c14: #ffffff;
-
-    /***** sidebar >>> hover ******/
-    --c3: #6cdbeb;
-
-    /**** sidebar >>> button borders ******/
-    --c4: white(242, 242, 242);
-
-    /***** single cards >>> background ****/
-    --c8: #005C4B;
-
-    /***** single cards  >>> borders ******/
-    --c9: #394853;
-
-    /***** banks >>> background ******/
-    --c12: #394853;
-
-    /***** whatsapp color for header just on phone >>> background ******/
-    --c13: #ffffff;
-    --color-radius-1: 0.4rem;
-
+    --body-sidebar-bg: #ffffff;
+    --main-bg: #EFEAE2;
+    --header-bg: #00A884;
+    --balance-bg: #ffffffac;
+    --black-white-mode-text: #000000;
+    --header-text: #ffffff;
+    --productCard-bg: #00A884;
 }
 
-body {
-    background-color: var(--c1) !important;
+.dark-theme-variables {
+    --body-sidebar-bg: #111b21;
+    --main-bg: #0B141A;
+    --header-bg: #202C33;
+    --balance-bg: #005C4B;
+    --black-white-mode-text: #e4e4e4;
+    --header-text: #ffffff;
+    --productCard-bg: #004335;
 }
-
 
 * {
     padding: 0;
@@ -94,27 +27,31 @@ body {
     list-style-type: none;
     text-decoration: none;
     font-family: 'Noto Kufi Arabic', sans-serif;
-    /* font-family: 'Tajawal', sans-serif; */
-    
-    /*نختار خط عربي */
 }
 
+body {
+    background-color: var(--body-sidebar-bg) !important;
+}
 
 .theme-toggler {
-    background-color: var(--main_bg);
+    /* background-color: var(--main-bg); */
     display: block;
     justify-content: space-between;
     height: 1.6rem;
     width: 2rem;
     cursor: pointer;
-    border-radius: 50px;
     margin-right: 20px;
     margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggler span {
+    background-color: rgb(0, 197, 144);
+    border-radius: 50px;
     font-size: 1.2rem;
-    width: 50%;
+    width: 25px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -123,13 +60,10 @@ body {
 }
 
 .theme-toggler span.active {
-    background: rgb(255, 255, 255) !important;
-    color: rgb(3, 23, 35);
+    background: var(--body-sidebar-bg) !important;
+    color: var(--black-white-mode-text);
     border-radius: 10px;
 }
-
-
-
 
 .sidebar {
     direction: rtl;
@@ -138,7 +72,7 @@ body {
     right: 0;
     top: 0;
     height: 100%;
-    background: var(--c1);
+    background: var(--body-sidebar-bg);
     z-index: 100;
     transition: margin-right 300ms;
 }
@@ -148,7 +82,7 @@ body {
     text-align: center;
     height: 90px;
     padding: 0rem 1rem 1rem 0rem;
-    color: var(--c2);
+    color: var(--black-white-mode-text);
     font-size: 0.7rem;
     align-items: center;
     justify-content: right;
@@ -166,7 +100,7 @@ body {
     display: flex;
     text-align: center;
     font-size: 1.3rem;
-    color: var(--c14);
+    color: var(--black-white-mode-text);
     margin-top: 1rem;
 }
 
@@ -176,10 +110,10 @@ body {
 }
 
 .sidebar-menu li:hover {
-    background-color: var(--main_bg);
+    background-color: var(--main-bg);
 }
 
-/*الايقونات كاملة بداخلها النصوص*/
+/*--------الايقونات كاملة بداخلها النصوص----------*/
 .sidebar-menu a {
     display: flex;
     padding-right: 1rem;
@@ -190,7 +124,7 @@ body {
 }
 
 .sidebar-menu span {
-    color: var(--c2);
+    color: var(--black-white-mode-text);
 }
 
 .sidebar-menu a span:first-child {
@@ -206,9 +140,13 @@ body {
     width: 70px;
 }
 
-#nav-toggle:checked+.sidebar .sidebar-brand,
-#nav-toggle:checked+.sidebar li {
+#nav-toggle:checked+.sidebar .sidebar-brand {
     padding-right: 0rem;
+    text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li {
+    padding-right: 1rem;
     text-align: center;
 }
 
@@ -249,16 +187,15 @@ body {
     margin-right: 345px;
 }
 
-
-/* header */
+/*-------- header ---------*/
 header {
-    background: var(--c17);
-    color: var(--c2);
+    background: var(--header-bg);
+    color: var(--black-white-mode-text);
     display: flex;
     justify-content: space-between;
-    padding: 1.1rem 1.5rem;
+    padding: 1.1rem 1rem;
     box-shadow: rgba(140, 140, 150, 0.1) 0px 1px 0px;
-    border-right: 1px solid var(--c1);
+    border-right: 1px solid var(--body-sidebar-bg);
     position: fixed;
     right: 345px;
     width: calc(100% - 345px);
@@ -273,18 +210,16 @@ header {
 
 header h2 {
     display: flex;
-    color: var(--c2);
     font-size: 0.98rem;
     align-items: center;
 }
 
-/*الثلث شخطات فوق بعض*/
+/*----الثلث شخطات فوق بعض*----*/
 header label span {
-
     font-size: 2.5rem;
-    padding-left: 0.7rem;
+    padding-left: 0.4rem;
     padding-top: 9px;
-    color: var(--c2);
+    color: var(--header-text);
     cursor: pointer;
 }
 
@@ -292,23 +227,21 @@ header h2 p {
     text-align: center;
     padding-left: 0rem;
     font-size: 0.9rem;
-    color: var(--c2);
+    color: var(--header-text);
     font-weight: 500;
 }
 
-
 .user-wrapper p {
     font-size: 0.85rem !important;
-    /* letter-spacing: 1px; */
     text-align: center;
-    color: var(--c2);
+    color: var(--header-text);
 }
 
 .user-wrapper small {
     font-size: 0.9rem !important;
     letter-spacing: 1px;
     text-align: center;
-    color: var(--c2);
+    color: var(--header-text);
 }
 
 .card-single-categories img {
@@ -316,31 +249,28 @@ header h2 p {
     margin-left: 1rem;
 }
 
-/*main*/
+/*-------main-------*/
 main {
     display: block;
     direction: rtl;
     margin-top: 90px;
     padding: 2rem 1.1rem;
-    background: var(--main_bg);
+    background: var(--main-bg);
     min-height: calc(100vh - 90px);
-    color: var(--c2);
-    /*خلفية المحتوى*/
+    color: var(--black-white-mode-text);
 }
 
 main .notes {
     margin-top: 70px;
     letter-spacing: .5px;
     font-size: 0.9rem;
-    color: var(--c6);
 }
 
 .notes p a {
-    color: #ffffff;
     border-radius: 30px;
     cursor: pointer;
     text-decoration: underline;
-    color: rgb(5, 186, 153);
+    color: rgb(0, 198, 106);
 }
 
 .cards {
@@ -357,11 +287,10 @@ main .notes {
 .card-single {
     display: flex;
     justify-content: space-between;
-    background-color: var(--c8);
+    background: var(--balance-bg);
     padding: 1.3rem 0rem;
     border-radius: 10px;
     cursor: pointer;
-    /* box-shadow: rgba(0, 0, 0, 0.167) 0px 25px 50px -12px; */
 }
 
 .balanceAndID {
@@ -371,120 +300,34 @@ main .notes {
 }
 
 .card-single p {
-    color: var(--c10);
+    color: var(--black-white-mode-text);
     font-size: 1.3rem;
     font-family: 'Segoe UI Regular' !important;
 }
 
-
-.card-single span {
-    color: var(--c6) !important;
-    font-size: 1rem;
-}
-
 .card-single div:first-child span {
-    color: var(--c7);
-    font-size: 1rem;
-}
-
-
-/***card single categories**/
-.cards-categories {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 1rem;
-    margin-top: 0rem;
-}
-
-.card-single-categories {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid var(--c9);
-    background-color: var(--c8);
-    padding: 0.5rem;
-    border-radius: 10px;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.card-single-categories:hover {
-    background-color: var(--c11);
-}
-
-.card-single-categories p {
-    color: var(--c6);
-    font-size: 0.95rem;
-}
-
-.card-single-categories div:first-child span {
-    color: var(--c6);
+    color: var(--black-white-mode-text);
     font-size: 1rem;
 }
 
 /*****banks design*******/
-.banks {
-    display: inline-block;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
-    justify-content: center;
-}
-
-div.gallery {
-    direction: ltr;
-    margin: 10px;
-    display: inline-block;
-    width: 300px;
-    background-color: rgb(91, 138, 134);
-    height: 250px;
-    color: black;
-    font-weight: 600;
-    font-size: 17px;
-
-}
-
-.divImg {
-    background-color: rgb(255, 255, 255);
-    height: 70px;
-    margin-bottom: 20px;
-}
-
-div.gallery img {
-    width: 170px;
-    height: auto;
-    padding: 5px;
-    justify-content: center;
-    transition: .3s ease-in-out;
-}
-
-
-div.desc {
-    padding: 0 15px;
-    text-align: left;
-}
-
 .banks-header {
     margin-top: 70px;
     justify-content: center;
     text-align: center;
-    color: var(--c6);
     font-size: 1.6em;
 }
 
-
 /******* game section ******/
-
-.game_section{
+.game_section {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-gap: 1rem;
-    
+
 }
 
-
-.gameElement{
+.gameElement {
     display: block;
-    /* background-color: var(--c8); */
     padding: 10px 0px;
     margin: 20px;
     border-radius: 10px;
@@ -495,7 +338,7 @@ div.desc {
     height: 15vh;
 }
 
-.gameElement p{
+.gameElement p {
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -503,7 +346,7 @@ div.desc {
     font-family: 'Noto Naskh Arabic', serif;
 }
 
-.gameElement  img{
+.gameElement img {
     width: 4vw;
     height: 7vh;
     border-radius: 20px;
@@ -512,11 +355,9 @@ div.desc {
     opacity: 0.8;
 }
 
-
 .gameElement .imgAndTitle:hover img {
     opacity: 1;
 }
-
 
 /**************/
 /**************/
@@ -532,19 +373,18 @@ div.desc {
     padding: 0.5rem;
 }
 
-.order1 , .order2 , .order3 {
+.order1,
+.order2,
+.order3 {
     display: flex;
     flex-wrap: wrap;
     margin: 0 0;
-    color: black !important;
+    color: var(--black-white-mode-text) !important;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--balance-bg);
 }
 
-
 .orderRow p {
-    /* font-family: Arial, Helvetica, sans-serif */
-    /* font-size: 1rem; */
     margin: 0.8rem 0.1rem;
     padding: 0.5rem 0.1rem;
     line-height: 0.02rem;
@@ -558,48 +398,91 @@ div.desc {
 }
 
 .orderDetailsMobile {
-    color:rgb(27, 95, 255);
+    color: rgb(255, 136, 136);
 }
 
 .orderDetailsMobileLabel {
     font-weight: 400;
 }
+
 .orderPrices {
     justify-content: space-between;
 }
 
 .orderProfit {
     /* background:rgb(202, 221, 204);  */
-    color:rgb(192, 0, 218);
+    color: rgb(192, 0, 218);
 }
 
 .turkLira {
-    color: rgb(0, 94, 255);
+    color: rgb(255, 136, 136);
 }
+
+/**************/
+/**************/
+/*** gameProductCard ****/
+
+.gameProductSection{
+    /* background-color: rgb(181, 196, 110); */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameProductCard {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    background-color: var(--balance-bg);
+    border: 1px solid green;
+    margin: 0.6rem 0.4rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.gameProductCard:hover {
+    box-shadow: none;
+}
+
+.gameProductCardTitle {
+    border-radius: 10px;
+    padding: 1rem 1rem;
+}
+
+.gameProductCardTitle p {
+    text-align: center;
+}
+.gameProductCardPrice p {
+    text-align: center;
+    padding: 0.3rem 0;
+    background: var(--header-bg);
+    color: white;
+    font-size: 1rem;
+}
+
+
+
 /**************/
 /**************/
 /*** Media ****/
 
 @media only screen and (max-width: 1400px) {
-    .game_section{
+    .game_section {
         grid-template-columns: repeat(6, 1fr);
     }
-    .gameElement  img{
+
+    .gameElement img {
         width: 4vw;
     }
 }
+
 @media only screen and (max-width: 1600px) {
-    .game_section{
+    .game_section {
         grid-template-columns: repeat(6, 1fr);
     }
-    .gameElement  img{
+
+    .gameElement img {
         width: 5vw;
     }
 }
 
 /*----------------------------*/
-
-
 
 @media only screen and (max-width: 1200px) {
     .sidebar {
@@ -610,10 +493,11 @@ div.desc {
         grid-template-columns: 100%;
     }
 
-    .game_section{
+    .game_section {
         grid-template-columns: repeat(5, 1fr);
     }
-    .gameElement  img{
+
+    .gameElement img {
         width: 7vw;
     }
 
@@ -636,8 +520,6 @@ div.desc {
         display: none;
     }
 
-
-
     .main-content {
         margin-right: 70px;
     }
@@ -651,17 +533,16 @@ div.desc {
 /*-------------------------------------*/
 
 
-/*---------------------------------------*/
-
-
 @media only screen and (max-width: 960px) {
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
-    .game_section{
+
+    .game_section {
         grid-template-columns: repeat(4, 1fr);
     }
-    .gameElement  img{
+
+    .gameElement img {
         width: 7vw;
     }
 
@@ -691,13 +572,16 @@ div.desc {
     .cards {
         grid-template-columns: 100%;
     }
-    .game_section{
+
+    .game_section {
         grid-template-columns: repeat(4, 1fr);
     }
-    .gameElement  img{
+
+    .gameElement img {
         width: 9vw;
     }
-    .gameElement  p{
+
+    .gameElement p {
         line-height: 1.2rem;
     }
 
@@ -724,7 +608,7 @@ div.desc {
 
     .sidebar {
         right: -100% !important;
-        background-color: var(--c1);
+        background: var(--body-sidebar-bg);
     }
 
     header h2 {
@@ -735,13 +619,9 @@ div.desc {
     header h2 label {
         display: inline-block;
         text-align: center;
-        background: var(--c1);
-        padding-left: 0rem;
-        margin-left: 1rem;
-        height: 40px;
-        width: 40px;
+        background: var(--header-bg);
         border-radius: 50%;
-        color: var(--c2);
+        color: var(--black-white-mode-text);
         display: flex;
         align-items: center;
         justify-content: center !important;
@@ -749,8 +629,9 @@ div.desc {
 
     header h2 span {
         text-align: center;
-        padding-left: 0.5rem;
+        padding-right: 0rem;
         padding-top: 0px !important;
+
 
     }
 
@@ -768,7 +649,7 @@ div.desc {
     header {
         width: 100% !important;
         right: 0 !important;
-        background-color: var(--c17);
+        background: var(--header-bg);
     }
 
     #nav-toggle:checked+.sidebar {
@@ -795,31 +676,38 @@ div.desc {
     #nav-toggle:checked~.main-content {
         margin-right: 0rem !important;
     }
+
+    .theme-toggler {
+        display: flex;
+        margin-right: 3.5rem;
+    }
 }
 
 @media only screen and (max-width: 560px) {
     .cards {
         grid-template-columns: 100%;
     }
-    .game_section{
+
+    .game_section {
         grid-template-columns: repeat(3, 1fr);
-        width: 90vw;  
+        width: 90vw;
     }
 
-    .gameElement p{
+    .gameElement p {
         align-items: center;
         justify-content: center;
         text-align: center;
         font-size: 0.85rem;
         line-height: 1.2rem;
     }
-    .gameElement{
+
+    .gameElement {
         margin: 0;
         align-items: center;
         justify-content: center;
     }
 
-    .gameElement img{
+    .gameElement img {
         width: 14vw;
         opacity: 1;
     }
@@ -836,127 +724,4 @@ div.desc {
     .cards-banks {
         grid-template-columns: 100%;
     }
-}
-/*************************************************/
-
-
-.container {
-    width: 100%;
-    height: 91vh;
-    margin-top: 9vh;
-    font-family: 'Noto Kufi Arabic', sans-serif;
-    background-color: var(--main_bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card {
-    width: 350px;
-    height: 600px;
-    box-shadow: 0 0 40px 20px rgba(8, 8, 8, 0.26);
-    perspective: 1000px;
-}
-
-.inner-box {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-}
-
-.front-card,
-.back-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background: linear-gradient(#00A884, #0d8b70);
-    padding: 55px;
-    box-sizing: border-box;
-    backface-visibility: hidden;
-}
-
-.back-card {
-    transform: rotateY(180deg);
-}
-
-.card h2 {
-    color: rgb(205, 226, 220);
-    font-weight: normal;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.input-box {
-    width: 100%;
-    background: transparent;
-    border: 1px solid rgb(185, 209, 202);
-    margin: 6px 0;
-    height: 35px;
-    border-radius: 20px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    outline: none;
-    text-align: center;
-    color: rgb(244, 255, 251);
-    font-size: 1rem;
-}
-
-::placeholder {
-    color: rgb(185, 209, 202);
-    font-size: 14px;
-}
-
-.submit-btn {
-    position: relative;
-    width: 100%;
-    background: rgb(0, 0, 0, 0.3);
-    border: 1px solid rgb(185, 209, 202);
-    margin: 6px 0;
-    height: 45px;
-    border-radius: 20px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    outline: none;
-    text-align: center;
-    color: rgb(185, 209, 202);
-    ;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-span {
-    font-size: 14px;
-    margin-right: 10px;
-    color: rgb(185, 209, 202);
-    ;
-}
-
-.card .btn {
-    width: 100%;
-    background: rgb(0, 0, 0, 0.3);
-    border: 1px solid rgb(185, 209, 202);
-    margin: 60px 0 6px 0;
-    height: 45px;
-    border-radius: 20px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    outline: none;
-    text-align: center;
-    color: rgb(185, 209, 202);
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
-.card a {
-    color: rgb(220, 228, 115);
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    font-size: 13px;
-    margin-top: 8px;
 }
