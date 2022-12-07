@@ -7,7 +7,6 @@
     --balance-bg: #ffffffac;
     --black-white-mode-text: #000000;
     --header-text: #ffffff;
-    --productCard-bg: #00A884;
 }
 
 .dark-theme-variables {
@@ -17,7 +16,6 @@
     --balance-bg: #005C4B;
     --black-white-mode-text: #e4e4e4;
     --header-text: #ffffff;
-    --productCard-bg: #004335;
 }
 
 * {
@@ -320,22 +318,22 @@ main .notes {
 
 /******* game section ******/
 .game_section {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 1rem;
-
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: red; */
 }
 
 .gameElement {
-    display: block;
+    width: 7vw;
+    height: 15vh;    
     padding: 10px 0px;
-    margin: 20px;
+    margin: 10px 20px;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
     text-align: center;
     cursor: pointer;
-    height: 15vh;
+    /* background-color: yellow; */
 }
 
 .gameElement p {
@@ -347,16 +345,15 @@ main .notes {
 }
 
 .gameElement img {
-    width: 4vw;
-    height: 7vh;
+    width: 4.5rem;
+    height: 4.5rem;
     border-radius: 20px;
     -webkit-transition: .3s ease-in-out;
     transition: .1s ease-in-out;
-    opacity: 0.8;
 }
 
 .gameElement .imgAndTitle:hover img {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 /**************/
@@ -422,20 +419,22 @@ main .notes {
 /**************/
 /*** gameProductCard ****/
 
-.gameProductSection{
+.gameProductSection {
     /* background-color: rgb(181, 196, 110); */
     display: flex;
     flex-wrap: wrap;
 }
 
 .gameProductCard {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    background-color: var(--balance-bg);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--balance-bg);
     border: 1px solid green;
     margin: 0.6rem 0.4rem;
     border-radius: 10px;
     font-size: 0.9rem;
     cursor: pointer;
 }
+
 .gameProductCard:hover {
     box-shadow: none;
 }
@@ -448,6 +447,7 @@ main .notes {
 .gameProductCardTitle p {
     text-align: center;
 }
+
 .gameProductCardPrice p {
     text-align: center;
     padding: 0.3rem 0;
@@ -463,23 +463,23 @@ main .notes {
 /*** Media ****/
 
 @media only screen and (max-width: 1400px) {
-    .game_section {
+    /* .game_section {
         grid-template-columns: repeat(6, 1fr);
     }
 
     .gameElement img {
         width: 4vw;
-    }
+    } */
 }
 
 @media only screen and (max-width: 1600px) {
-    .game_section {
+    /* .game_section {
         grid-template-columns: repeat(6, 1fr);
     }
 
     .gameElement img {
         width: 5vw;
-    }
+    } */
 }
 
 /*----------------------------*/
@@ -494,12 +494,29 @@ main .notes {
     }
 
     .game_section {
-        grid-template-columns: repeat(5, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+      .gameElement {
+        width: 9vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .gameElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
     }
 
     .gameElement img {
-        width: 7vw;
-    }
+        width: 4rem;
+        height: 4rem;
+    } 
 
     .sidebar li {
         padding-right: 1rem;
@@ -539,12 +556,29 @@ main .notes {
     }
 
     .game_section {
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+      .gameElement {
+        width: 10vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .gameElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
     }
 
     .gameElement img {
-        width: 7vw;
-    }
+        width: 4rem;
+        height: 4rem;
+    } 
 
     .orderRow {
         display: block;
@@ -574,16 +608,29 @@ main .notes {
     }
 
     .game_section {
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+      .gameElement {
+        width: 12vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .gameElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
     }
 
     .gameElement img {
-        width: 9vw;
-    }
-
-    .gameElement p {
-        line-height: 1.2rem;
-    }
+        width: 4rem;
+        height: 4rem;
+    } 
 
     .orderRow {
         display: block;
@@ -689,28 +736,29 @@ main .notes {
     }
 
     .game_section {
-        grid-template-columns: repeat(3, 1fr);
-        width: 90vw;
+        display: flex;
+        flex-wrap: wrap;
     }
+
+      .gameElement {
+        width: 21vw;
+        margin: 0rem 1rem 1.5rem 1rem;
+        align-items: center;
+        justify-content: center;
+    } 
 
     .gameElement p {
         align-items: center;
         justify-content: center;
         text-align: center;
-        font-size: 0.85rem;
-        line-height: 1.2rem;
-    }
-
-    .gameElement {
-        margin: 0;
-        align-items: center;
-        justify-content: center;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
     }
 
     .gameElement img {
-        width: 14vw;
-        opacity: 1;
-    }
+        width: 4rem;
+        height: 4rem;
+    } 
 
     .orderRow {
         display: block;
