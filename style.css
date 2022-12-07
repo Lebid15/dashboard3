@@ -333,7 +333,6 @@ main .notes {
     justify-content: center;
     text-align: center;
     cursor: pointer;
-    /* background-color: yellow; */
 }
 
 .gameElement p {
@@ -350,10 +349,15 @@ main .notes {
     border-radius: 20px;
     -webkit-transition: .3s ease-in-out;
     transition: .1s ease-in-out;
+    /* background-color: red; */
 }
 
 .gameElement .imgAndTitle:hover img {
     opacity: 0.8;
+}
+
+.game_section a{
+    color: var(--black-white-mode-text);
 }
 
 /**************/
