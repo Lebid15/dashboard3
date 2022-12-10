@@ -320,7 +320,6 @@ main .notes {
 .game_section {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: red; */
 }
 
 .gameElement {
@@ -349,7 +348,7 @@ main .notes {
     border-radius: 20px;
     -webkit-transition: .3s ease-in-out;
     transition: .1s ease-in-out;
-    /* background-color: red; */
+    background-color: red;
 }
 
 .gameElement .imgAndTitle:hover img {
