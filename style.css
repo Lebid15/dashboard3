@@ -324,7 +324,7 @@ main .notes {
 
 .gameElement {
     width: 7vw;
-    height: 15vh;    
+    height: 15vh;
     padding: 10px 0px;
     margin: 10px 20px;
     border-radius: 10px;
@@ -348,14 +348,13 @@ main .notes {
     border-radius: 20px;
     -webkit-transition: .3s ease-in-out;
     transition: .1s ease-in-out;
-    background-color: red;
 }
 
 .gameElement .imgAndTitle:hover img {
     opacity: 0.8;
 }
 
-.game_section a{
+.game_section a {
     color: var(--black-white-mode-text);
 }
 
@@ -501,12 +500,12 @@ main .notes {
         flex-wrap: wrap;
     }
 
-      .gameElement {
+    .gameElement {
         width: 9vw;
         margin: 0rem 1rem 1rem 1rem;
         align-items: center;
         justify-content: center;
-    } 
+    }
 
     .gameElement p {
         align-items: center;
@@ -519,7 +518,7 @@ main .notes {
     .gameElement img {
         width: 4rem;
         height: 4rem;
-    } 
+    }
 
     .sidebar li {
         padding-right: 1rem;
@@ -563,12 +562,12 @@ main .notes {
         flex-wrap: wrap;
     }
 
-      .gameElement {
+    .gameElement {
         width: 10vw;
         margin: 0rem 1rem 1rem 1rem;
         align-items: center;
         justify-content: center;
-    } 
+    }
 
     .gameElement p {
         align-items: center;
@@ -581,7 +580,7 @@ main .notes {
     .gameElement img {
         width: 4rem;
         height: 4rem;
-    } 
+    }
 
     .orderRow {
         display: block;
@@ -615,12 +614,12 @@ main .notes {
         flex-wrap: wrap;
     }
 
-      .gameElement {
+    .gameElement {
         width: 12vw;
         margin: 0rem 1rem 1rem 1rem;
         align-items: center;
         justify-content: center;
-    } 
+    }
 
     .gameElement p {
         align-items: center;
@@ -633,7 +632,7 @@ main .notes {
     .gameElement img {
         width: 4rem;
         height: 4rem;
-    } 
+    }
 
     .orderRow {
         display: block;
@@ -743,12 +742,12 @@ main .notes {
         flex-wrap: wrap;
     }
 
-      .gameElement {
+    .gameElement {
         width: 21vw;
         margin: 0rem 1rem 1.5rem 1rem;
         align-items: center;
         justify-content: center;
-    } 
+    }
 
     .gameElement p {
         align-items: center;
@@ -761,7 +760,7 @@ main .notes {
     .gameElement img {
         width: 4rem;
         height: 4rem;
-    } 
+    }
 
     .orderRow {
         display: block;
