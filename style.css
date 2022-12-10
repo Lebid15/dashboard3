@@ -348,6 +348,7 @@ main .notes {
     border-radius: 20px;
     -webkit-transition: .3s ease-in-out;
     transition: .1s ease-in-out;
+    background-color: red;
 }
 
 .gameElement .imgAndTitle:hover img {
@@ -443,10 +444,13 @@ main .notes {
 
 .gameProductCardTitle {
     border-radius: 10px;
-    padding: 1rem 1rem;
+    width: 8rem;
+    height: 5rem;
+    padding: 1rem;
 }
 
 .gameProductCardTitle p {
+    font-size: 0.9rem;
     text-align: center;
 }
 
@@ -455,7 +459,7 @@ main .notes {
     padding: 0.3rem 0;
     background: var(--header-bg);
     color: white;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 
@@ -774,4 +778,12 @@ main .notes {
     .cards-banks {
         grid-template-columns: 100%;
     }
+
+    .gameProductCardTitle {
+        border-radius: 10px;
+        width: 5.8rem;
+        height: 4rem;
+        padding: 0.5rem 0rem;
+    }
+    
 }
