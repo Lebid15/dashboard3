@@ -348,7 +348,6 @@ main .notes {
     border-radius: 20px;
     -webkit-transition: .3s ease-in-out;
     transition: .1s ease-in-out;
-    background-color: red;
 }
 
 .gameElement .imgAndTitle:hover img {
@@ -467,29 +466,6 @@ main .notes {
 /**************/
 /**************/
 /*** Media ****/
-
-@media only screen and (max-width: 1400px) {
-    /* .game_section {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .gameElement img {
-        width: 4vw;
-    } */
-}
-
-@media only screen and (max-width: 1600px) {
-    /* .game_section {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .gameElement img {
-        width: 5vw;
-    } */
-}
-
-/*----------------------------*/
-
 @media only screen and (max-width: 1200px) {
     .sidebar {
         width: 70px;
