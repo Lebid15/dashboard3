@@ -461,6 +461,56 @@ main .notes {
     font-size: 0.9rem;
 }
 
+/**************/
+/**************/
+/*** TEST ****/
+.Test {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 0 5px;
+    font-size: 12px;
+    color: black;
+    
+}
+.Test .left {
+    border-right: 1px solid rgb(137, 137, 137);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    line-height: 10px;
+    padding-right: 5px;
+}
+
+.right .title {
+    color: #000000;
+    
+}
+
+.rightOne {
+    display: flex;
+}
+.rightTwo {
+    display: flex;
+}
+.rightThree {
+    display: flex;
+}
+
+.orderCompleted {
+    color: rgb(0, 189, 0);
+    padding-top: 10px;
+}
+.orderRejected {
+    color: rgb(189, 0, 0);
+    padding-top: 10px;
+}
+.orderWaiting {
+    color: rgb(174, 177, 0);
+    padding-top: 10px;
+}
+
 
 
 /**************/
