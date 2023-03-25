@@ -587,7 +587,7 @@ main .notes {
 }
 
 .turkcellProductCard:hover {
-    background-color: rgb(245, 255, 202);
+    background-color: rgb(220, 221, 218);
     box-shadow: rgba(238, 255, 0, 0.24) 0px 3px 8px;
 }
 
@@ -598,7 +598,7 @@ main .notes {
     width: 6rem;
     color: white;
     padding: 0.5rem;
-    background: #6ca8c4;
+    background: #7c84fd;
     border-radius: 10px;
     text-align: center;
 }
@@ -614,7 +614,7 @@ main .notes {
 
 .turkcellProductCardName p {
     text-align: center;
-    color: rgb(0, 164, 214);
+    color: rgb(0, 0, 0);
     font-size: 0.85rem;
 }
 
@@ -627,22 +627,51 @@ main .notes {
 /* المرحلة الثالثة من قسم الجوال */
 
 .order-review {
-    background-color: rgb(209, 216, 216);
+    background-color: rgb(230, 229, 220);
     text-align: center;
-    width: 400px;
+    width: 300px;
     align-items: center;
     margin: 0 auto;
     padding: 20px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .plan-details {
-    display:flex;
+    width: 100%;
+    background-color: rgb(214, 213, 201);
+    display:inline-block;
     margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+    direction: ltr;
 }
 
 .plan-details img{
-   width: 100px;
-   margin: 0 5px;
+   width: 70px;
+   margin: 5px 20px 0 10px;
+}
+
+/* .plan-details-2 {
+    text-align: right;
+} */
+
+.order-review input{
+   border: 1px solid green;
+   border-radius: 10px;
+   width: 150px;
+   margin: 5px 5px 40px 5px;
+   padding: 5px;
+}
+
+.plan-details-2 button{
+    background-color: #43b4b4;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
 }
 
 
