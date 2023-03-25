@@ -40,14 +40,6 @@
                </a>
             </li>
             <li>
-               <a href="apprecharge.html">
-                  <span class="material-symbols-outlined">
-                     apps
-                  </span>
-                  <span>شحن التطبيقات</span>
-               </a>
-            </li>
-            <li>
                <a href="phonerecharge.html">
                   <span class="material-symbols-outlined">phone_iphone</span>
                   <span>شحن الجوال</span>
@@ -61,16 +53,32 @@
             </li>
             <li>
                <a href="orders.html">
-                  <span class="material-symbols-outlined">
-                     list_alt
-                  </span>
-                  <span>طلباتي</span>
+                  <span class="material-symbols-outlined">list_alt</span>
+                  <span>طلبات الالعاب</span>
+               </a>
+            </li>
+            <li>
+               <a href="orders.html">
+                  <span class="material-symbols-outlined">list_alt</span>
+                  <span>طلبات الجوال</span>
+               </a>
+            </li>
+            <li>
+               <a href="orders.html">
+                  <span class="material-symbols-outlined">list_alt</span>
+                  <span>طلبات الفواتير</span>
                </a>
             </li>
             <li>
                <a href="profile.html">
                   <span class="material-symbols-outlined">person</span>
-                  <span>بروفايلي</span>
+                  <span>الحركات البنكية</span>
+               </a>
+            </li>
+            <li>
+               <a href="profile.html">
+                  <span class="material-symbols-outlined">person</span>
+                  <span>أرباحي</span>
                </a>
             </li>
             <li>
@@ -95,7 +103,7 @@
             <label for="nav-toggle">
                <span class="material-symbols-outlined">menu</span>
             </label>
-            <p class="headerTitle">شحن التطبيقات
+            <p class="headerTitle">الصفحة الرئيسيّة
             <p>
 
          </h2>
@@ -107,73 +115,58 @@
             </div>
          </div>
       </header>
+
+
+
       <main>
-         <div class="game_section">
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="./images/likee.jpg" alt="">
-                  <p>لايكي</p>
+
+         <!-- قسم الجوال -->
+
+         <div class="phone_section">
+
+            <a href="phones_2.html">
+               <div class="phoneElement">
+                  <div class="phone_imgAndTitle">
+                     <img src="./images/turkcell.jpg" alt="">
+                     <p>تركسيل</p>
+                  </div>
                </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="./images/ahlan.jpg" alt="">
-                  <p>اهلاً شات</p>
+            </a>
+
+            <a href="phones_2.html">
+               <div class="phoneElement">
+                  <div class="imgAndTitle">
+                     <img src="./images/vodafone.jpg" alt="">
+                     <p>فودافون</p>
+                  </div>
                </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="./images/tiktok.jpg" alt="">
-                  <p>تيك توك</p>
+            </a>
+
+            <a href="phones_2.html">
+               <div class="phoneElement">
+                  <div class="phone_imgAndTitle">
+                     <img src="./images/turktelekom.png" alt="">
+                     <p>ترك تيليكوم</p>
+                  </div>
                </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="./images/bigo.jpg" alt="">
-                  <p>بيغو لايف</p>
-               </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="./images/ligo_icon.png" alt="">
-                  <p> ليغو لايف</p>
-               </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="./images/light.jpg" alt="">
-                  <p>لايت شات</p>
-               </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="images/oohla_icon.png" alt="">
-                  <p>اوهلا شات</p>
-               </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="images/soulchill_icon.png" alt="">
-                  <p>سول شيل</p>
-               </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="images/yoho.jpg" alt="">
-                  <p>يوهو</p>
-               </div>
-            </div>
-            <div class="gameElement">
-               <div class="imgAndTitle">
-                  <img src="images/netflex.jpg" alt="">
-                  <p>نت فليكس</p>
-               </div>
-            </div>
+            </a>
+
          </div>
+
+         <!-- قسم فحص نوع المشغل اما تركسيل او فودافون او ترك تلكوم -->
+         <div class="phoneNum_check">
+            <p>يكنك معرفة الرقم لأي شركة اتصالات</p>
+            <input type="number" placeholder="اكتب الرقم" required>
+            <button>افحص هنا</button>
+            <p>رقمك هو:  <large style="color:rgb(255, 27, 27);">تركسيل</large></p>
+            <p>حاول ثانية من فضلك</p>
+         </div>
+
       </main>
 
+
    </div>
-   <script src="./main.js"></script>
+   <script src="main.js"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>

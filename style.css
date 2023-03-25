@@ -316,48 +316,6 @@ main .notes {
     font-size: 1.6em;
 }
 
-/******* game section ******/
-.game_section {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.gameElement {
-    width: 7vw;
-    height: 15vh;
-    padding: 10px 0px;
-    margin: 10px 20px;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
-}
-
-.gameElement p {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.02rem;
-    font-family: 'Noto Naskh Arabic', serif;
-}
-
-.gameElement img {
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 20px;
-    -webkit-transition: .3s ease-in-out;
-    transition: .1s ease-in-out;
-}
-
-.gameElement .imgAndTitle:hover img {
-    opacity: 0.8;
-}
-
-.game_section a {
-    color: var(--black-white-mode-text);
-}
-
 /**************/
 /**************/
 /*** ORDERS ****/
@@ -461,6 +419,233 @@ main .notes {
     font-size: 0.9rem;
 }
 
+/******* قسم الالعاب ******/
+.game_section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameElement {
+    width: 7vw;
+    height: 15vh;
+    padding: 10px 0px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gameElement p {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.02rem;
+    font-family: 'Noto Naskh Arabic', serif;
+}
+
+.gameElement img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 20px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+.gameElement .imgAndTitle:hover img {
+    opacity: 0.8;
+}
+
+.game_section a {
+    color: var(--black-white-mode-text);
+}
+
+
+/******* قسم الجوال ******/
+.phone_section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.phoneElement {
+    width: 7vw;
+    height: 15vh;
+    padding: 10px 0px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.phoneElement p {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.02rem;
+    font-family: 'Noto Naskh Arabic', serif;
+}
+
+.phoneElement img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 20px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+.phoneElement .phone_imgAndTitle:hover img {
+    opacity: 0.8;
+}
+
+.phone_section a {
+    color: var(--black-white-mode-text);
+}
+
+.phoneNum_check input {
+    margin: 10px 0px 10px 5px;
+    width: 170px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.phoneNum_check button {
+    background-color: #43b4b4;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.phoneNum_check button:hover {
+    background-color: white;
+    color: #43b4b4;
+    border: 1px solid #43b4b4;
+}
+
+.phoneNum_check {
+    padding: 5px 20px 5px 10px;
+}
+
+/*  قسم الجوال المرحلة الثانية السوركولا */
+
+.turkcellProductFilter {
+    justify-content: center;
+    text-align: center;
+}
+
+
+.phoneNum_sorgula input {
+    margin: 0px 0px 0px 5px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid green;
+}
+
+.phoneNum_sorgula {
+    padding: 5px 20px 5px 10px;
+}
+
+.operator_tips {
+    text-align: center;
+    line-height: 1.3;
+    font-size: 12px;    
+}
+
+.operator_tips a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(64, 65, 66);
+    margin: 10px 4px;
+}
+
+.operator_tips a:hover {
+    color: rgb(255, 0, 0);
+}
+
+.turkcellProductSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.turkcellProductCard {
+    display: inline;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--balance-bg);
+    margin: 0.2rem 0.3rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.turkcellProductCard:hover {
+    background-color: rgb(245, 255, 202);
+    box-shadow: rgba(238, 255, 0, 0.24) 0px 3px 8px;
+}
+
+.turkcellLeft {
+    float: left;
+    margin: 0.2rem;
+    height: 3rem;
+    width: 6rem;
+    color: white;
+    padding: 0.5rem;
+    background: #6ca8c4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.turkcellRight {
+    display: block;
+    text-align: center;
+}
+
+.turkcellProductCardName {
+    text-align: center;
+}
+
+.turkcellProductCardName p {
+    text-align: center;
+    color: rgb(0, 164, 214);
+    font-size: 0.85rem;
+}
+
+.turkcellProductCardTitle {
+    direction: ltr;
+    text-align: center;
+    color: rgb(190, 132, 24);
+}
+
+/* المرحلة الثالثة من قسم الجوال */
+
+.order-review {
+    background-color: rgb(209, 216, 216);
+    text-align: center;
+    width: 400px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.plan-details {
+    display:flex;
+    margin-bottom: 30px;
+}
+
+.plan-details img{
+   width: 100px;
+   margin: 0 5px;
+}
+
+
 /**************/
 /**************/
 /*** TEST ****/
@@ -550,6 +735,31 @@ main .notes {
         height: 4rem;
     }
 
+    .phone_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .phoneElement {
+        width: 9vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .phoneElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
     .sidebar li {
         padding-right: 1rem;
         text-align: center;
@@ -612,6 +822,31 @@ main .notes {
         height: 4rem;
     }
 
+    .phone_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .phoneElement {
+        width: 10vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .phoneElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
     .orderRow {
         display: block;
     }
@@ -660,6 +895,31 @@ main .notes {
     }
 
     .gameElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .phone_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .phoneElement {
+        width: 12vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .phoneElement img {
         width: 4rem;
         height: 4rem;
     }
@@ -792,6 +1052,31 @@ main .notes {
         height: 4rem;
     }
 
+    .phone_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .phoneElement {
+        width: 21vw;
+        margin: 0rem 1rem 1.5rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+
+    .phoneElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
     .orderRow {
         display: block;
     }
@@ -810,6 +1095,12 @@ main .notes {
         width: 5.8rem;
         height: 4rem;
         padding: 0.5rem 0rem;
+    }
+
+    .turkcellProductSection {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
     }
     
 }

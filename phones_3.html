@@ -1,5 +1,3 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +12,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Harmattan&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="style.css">
-   <title>{% block title %}{% endblock %}</title>
+   <title>test</title>
 </head>
 
 <body>
@@ -23,7 +21,7 @@
    <!-- side bar section -->
    <div class="sidebar">
       <div class="sidebar-brand">
-         <img src="{% static 'ahla/images/ahlaLG7.png' %}" alt="logo">
+         <img src="images/ahlaLG7.png" alt="logo">
          <p>أهلا كارد</p>
       </div>
 
@@ -42,7 +40,7 @@
                </a>
             </li>
             <li>
-               <a href="phones.html">
+               <a href="phonerecharge.html">
                   <span class="material-symbols-outlined">phone_iphone</span>
                   <span>شحن الجوال</span>
                </a>
@@ -105,7 +103,7 @@
             <label for="nav-toggle">
                <span class="material-symbols-outlined">menu</span>
             </label>
-            <p class="headerTitle">{% block header %}{% endblock %}
+            <p class="headerTitle">الصفحة الرئيسيّة
             <p>
 
          </h2>
@@ -119,23 +117,61 @@
       </header>
 
 
-      {% block content %}
-      {% endblock %}
+      <!-- قسم تاكيد طلب الجوال - الصفحة الثالثة  -->
+      <main>
+
+        <div class="order-review">
+
+            <div class="plan-details">
+                <div>
+                    <p style="color:rgb(255, 59, 125);">5442199992</p>
+                    <p>FIRSAT YENİ 6GB</p>
+                    <p>500 DK 6 GB 100 SMS 1 AY</p>
+                    <p>سعر الشراء: 49.00 &#x20BA;</p>
+                </div>
+                <div>
+                    <img src="../dashboard3/images/turkcell.jpg" alt="">
+                </div>
+            </div>
+
+            <div>
+                <input type="hidden" name="csrfmiddlewaretoken" value="LK0QSQieEyzR0bpWNxlAWl5U06dZE91d0Ev8HwUtMjR41Em05cwdYYq7wdq3Usua">
+                <input type="hidden" name="plan_id" value="8">
+                <input type="hidden" name="price_paid" value="49.00">
+                <div class="price-to-sell-input">
+                    <label for="price_to_sell">سعر المبيع:</label>
+                    <input type="number" name="price_to_sell" id="price_to_sell" min="0" step="0.01"
+                        placeholder="أدخل سعر المبيع.">
+                </div>
+                <!-- Add the phone_num input field here -->
+                <div class="phone-num-input">
+                    <label for="phone_num">رقم الهاتف:</label>
+                    <input placeholder="أدخل رقم الهاتف." type="text" name="phone_num" id="phone_num" maxlength="10"
+                        required>
+                </div>
+                <button type="submit">تأكيد الطلب</button>
+            </div>
+                
+
+    </div>
 
 
-   </div>
-
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"></script>
+      </main>
 
 
-</body>
-
-</html>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+       crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+       crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+       crossorigin="anonymous"></script>
+ 
+ 
+ </body>
+ 
+ </html>
