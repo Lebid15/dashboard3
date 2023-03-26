@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
@@ -115,165 +115,130 @@
       </header>
 
       <main>
+
          <div class="orderSection">
 
-
-
-            <div class="orderRow">
-               <div class="Test" style="background: #83f576;">
-                  <div class="right">
-                     <div class="rightOne">
-                        <p class="title">5545134</p>
-                        <p class="title">~ ببجي تركي 325 شدة </p>
-                        <p style="color: #ff00c8;">250TL</p>
-                        
-                     </div>
-                     <div class="rightTwo">
-                        <p>المحفظة</p>
-                        <p>قبل 2550 ليرة</p>
-                        <p>بعد 2300 ليرة</p>
-                         <span class="material-symbols-outlined orderCompleted">
-                           task_alt
-                           </span>
-                     </div>
-                  </div>
-                  <div class="left">
-                     <p>24</p>
-                     <p>Dec</p>
-                  </div>
-               </div>
+            <div class="orderRow tableHidden">
+              <div>الرقم</div>
+              <div>الشركة</div>
+              <div>المنتج</div>
+              <div>معرف اللاعب</div>
+              <div>شراء</div>
+              <div>مبيع</div>
+              <div>ربح</div>
+              <div>ملاحظة</div>
+              <div>الحالة</div>
+              <div>التاربخ والوقت</div>
             </div>
 
-            <div class="orderRow">
-               <div class="Test" style="background: #ffbfa4;">
-                  <div class="right">
-                     <div class="rightOne">
-                        <p class="title">5545134</p>
-                        <p class="title">~ ببجي تركي 325 شدة </p>
-                        <p style="color: #ff00c8;">250TL</p>
-                        
-                     </div>
-                     <div class="rightTwo">
-                        <p>المحفظة</p>
-                        <p>قبل 2550 ليرة</p>
-                        <p>بعد 2300 ليرة</p>
-                        <span class="material-symbols-outlined orderRejected">
-                           cancel
-                           </span>
-                     </div>
-                  </div>
-                  <div class="left">
-                     <p>24</p>
-                     <p>Dec</p>
-                  </div>
-               </div>
+            <div class="orderRow completed">
+               <div style="width: 5px;" class="number1">265154</div>
+               <div><img src="../dashboard3/images/turkcell.jpg" style="width: 30px;"></div>
+               <div class="number2">GNC Mutlu 15 GB</div>
+               <div class="number3">5393403877</div>
+               <div class="number4">1400.25 &#8378;</div>
+               <div class="number5">1500.0 &#8378;</div>
+               <div class="number6">99.75</div>
+               <div class="number7">لايوجد ملاحظة</div>
+            <div>
+          
+          <span class="material-symbols-outlined">
+            done_outline
+            </span>
+          
+          <!-- completed -->
+        </div>
+        <div class="number9">
+          
+          
+              <p>24-03-2023</p>
+              <p>02:11:47</p>
+          
+        </div>
+      </div>
+      <!-- ----------------------- -->
+
+      <div class="orderRow pending">
+        <div style="width: 5px;" class="number1">566589</div>
+        <div><img src="../dashboard3/images/turkcell.jpg" style="width: 30px;"></div>
+        <div class="number2">mutlu 5 gb</div>
+        <div>5355211477</div>
+        <div>116.0 &#8378;</div>
+        <div>120.0 &#8378;</div>
+        <div>4.0</div>
+        <div>لايوجد ملاحظة</div>
+        <div>
+          
+          <span class="material-symbols-outlined">
+            hourglass_bottom
+            </span>
+          
+          <!-- pending -->
+        </div>
+        <div>
+          
+          
+              <p>24-03-2023</p>
+              <p>01:52:02</p>
+          
+        </div>
+      </div>
+      
+      <div class="orderRow completed">
+        <div style="width: 5px;" class="number1">246542</div>
+        <div><img src="../dashboard3/images/turktelekom.png" style="width: 30px;"></div>
+        <div class="number2">Gekeci 12 GB</div>
+        <div>5442199992</div>
+        <div>1220.25 &#8378;</div>
+        <div>1350.65 &#8378;</div>
+        <div>130.4</div>
+        <div>لايوجد ملاحظة</div>
+        <div>
+          
+          <span class="material-symbols-outlined">
+            done_outline
+            </span>
+          
+          <!-- completed -->
+        </div>
+        <div>
+          
+          
+              <p>24-03-2023</p>
+              <p>01:47:23</p>
+          
+        </div>
+      </div>
+      
+      <div class="orderRow refused">
+        <div style="width: 5px;" class="number1">5545135</div>
+        <div><img src="../dashboard3/images/vodafone.jpg" style="width: 30px;"></div>
+        <div class="number2">Net 25 GB</div>
+        <div>5442455523</div>
+        <div>126.0 &#8378;</div>
+        <div>140.0 &#8378;</div>
+        <div>14.0</div>
+        <div>ايدي ليس تركي</div>
+        <div>
+          
+          <span class="material-symbols-outlined">
+            cancel
+            </span>
+          
+          <!-- refused -->
+        </div>
+        <div>
+          
+          
+              <p>06-02-2023</p>
+              <p>01:53:04</p>
+          
+        </div>
+      </div>
+    
+              
             </div>
 
-            <div class="orderRow">
-               <div class="Test" style="background: #eaf576;">
-                  <div class="right">
-                     <div class="rightOne">
-                        <p class="title">5545134</p>
-                        <p class="title">~ ببجي تركي 325 شدة </p>
-                        <p style="color: #ff00c8;">250TL</p>
-                        
-                     </div>
-                     <div class="rightTwo">
-                        <p>المحفظة</p>
-                        <p>قبل 2550 ليرة</p>
-                        <p>بعد 2300 ليرة</p>
-                        <span class="material-symbols-outlined orderWaiting">
-                           schedule
-                           </span>
-                     </div>
-                  </div>
-                  <div class="left">
-                     <p>24</p>
-                     <p>Dec</p>
-                  </div>
-               </div>
-            </div>
-
-            <div class="orderRow">
-               <div class="Test" style="background: #83f576;">
-                  <div class="right">
-                     <div class="rightOne">
-                        <p class="title">5545134</p>
-                        <p class="title">~ ببجي تركي 325 شدة </p>
-                        <p style="color: #ff00c8;">250TL</p>
-                        
-                     </div>
-                     <div class="rightTwo">
-                        <p>المحفظة</p>
-                        <p>قبل 2550 ليرة</p>
-                        <p>بعد 2300 ليرة</p>
-                         <span class="material-symbols-outlined orderCompleted">
-                           task_alt
-                           </span>
-
-                     </div>
-                  </div>
-                  <div class="left">
-                     <p>24</p>
-                     <p>Dec</p>
-                  </div>
-               </div>
-            </div>
-            <div class="orderRow">
-               <div class="Test" style="background: #83f576;">
-                  <div class="right">
-                     <div class="rightOne">
-                        <p class="title">5545134</p>
-                        <p class="title">~ ببجي تركي 325 شدة </p>
-                        <p style="color: #ff00c8;">250TL</p>
-                        
-                     </div>
-                     <div class="rightTwo">
-                        <p>المحفظة</p>
-                        <p>قبل 2550 ليرة</p>
-                        <p>بعد 2300 ليرة</p>
-                         <span class="material-symbols-outlined orderCompleted">
-                           task_alt
-                           </span>
-
-                     </div>
-                  </div>
-                  <div class="left">
-                     <p>24</p>
-                     <p>Dec</p>
-                  </div>
-               </div>
-            </div>
-            <div class="orderRow">
-               <div class="Test" style="background: #83f576;">
-                  <div class="right">
-                     <div class="rightOne">
-                        <p class="title">5545134</p>
-                        <p class="title">~ ببجي تركي 325 شدة </p>
-                        <p style="color: #ff00c8;">250TL</p>
-                        
-                     </div>
-                     <div class="rightTwo">
-                        <p>المحفظة</p>
-                        <p>قبل 2550 ليرة</p>
-                        <p>بعد 2300 ليرة</p>
-                         <span class="material-symbols-outlined orderCompleted">
-                           task_alt
-                           </span>
-
-                     </div>
-                  </div>
-                  <div class="left">
-                     <p>24</p>
-                     <p>Dec</p>
-                  </div>
-               </div>
-            </div>
-
-
-
-
-         </div>
       </main>
 
 
