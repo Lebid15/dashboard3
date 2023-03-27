@@ -348,14 +348,17 @@ main .notes {
   
   .orderRow.completed > div {
     background-color: #c2e77d;
+    color: black;
   }
   
   .orderRow.refused > div {
     background-color: #D7A594;
+    color: black;
   }
   
   .orderRow.pending > div {
     background-color: #fff675;
+    color: black;
   }
   
   .pagination {
