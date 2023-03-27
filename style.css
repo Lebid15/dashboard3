@@ -332,6 +332,8 @@ main .notes {
     font-size: 13px;
   }
 
+
+
   .orderRow .number9 {
     width: 70px !important;
   }
@@ -350,6 +352,7 @@ main .notes {
     background-color: #c2e77d;
     color: black;
   }
+
   
   .orderRow.refused > div {
     background-color: #D7A594;
@@ -361,6 +364,10 @@ main .notes {
     color: black;
   }
   
+  .orderRow:hover> div {
+    color: rgb(0, 60, 255);
+  }
+
   .pagination {
     display: flex;
     justify-content: center;
