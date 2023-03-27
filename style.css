@@ -330,6 +330,10 @@ main .notes {
     display: table-row;
   }
   
+  .orderRow .playerID {
+    display: none;
+  }
+
   .orderRow > div {
     display: table-cell;
     padding: 8px;
@@ -989,6 +993,44 @@ main .notes {
         display: flex;
         margin-right: 3.5rem;
     }
+
+    
+    /* الاوردر للجوال */
+
+    .orderRow {
+        font-size: 10px;
+        display: flex;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    
+      .orderRow .number1,
+      .number3,
+      .number5,
+      .number7,
+      .number6 {
+        display: none !important;
+      }
+    
+      .orderRow .number2 {
+        width: 120px !important;
+      }
+    
+      .tableHidden {
+        display: none !important;
+      }
+
+      .orderRow .product {
+        width: 127px !important;
+      }
+
+      .orderRow .price {
+        width: 60px !important;
+      }
+
+      .orderRow .playerID {
+        display: block;
+      }
 }
 
 @media only screen and (max-width: 560px) {
@@ -1072,34 +1114,38 @@ main .notes {
     /* الاوردر للجوال */
 
     .orderRow {
+        font-size: 10px;
         display: flex;
-        flex-wrap: wrap;
-        font-size: 13px;
         text-align: center;
-        background-color: rgb(189, 189, 189) !important;
-        box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
-        margin-bottom: 10px;
-        padding: 10px 5px;
-    }
-
-    .completed {
-        background-color: #b3ffb3 ;
-    }
-
-    .orderRow .number1 {
-        width: 80px !important;
-    }
-
-    .orderRow .number2 {
-        width: 170px !important;
-    }
-
-    .orderRow .number7 {
+        margin-bottom: 5px;
+      }
+    
+      .orderRow .number1,
+      .number3,
+      .number5,
+      .number7,
+      .number6 {
+        display: none !important;
+      }
+    
+      .orderRow .number2 {
         width: 120px !important;
-    }
+      }
+    
+      .tableHidden {
+        display: none !important;
+      }
 
+      .orderRow .product {
+        width: 127px !important;
+      }
 
-     .tableHidden {
-        display: none;
-    }
+      .orderRow .price {
+        width: 60px !important;
+      }
+
+      .orderRow .playerID {
+        display: block;
+      }
+
 }
