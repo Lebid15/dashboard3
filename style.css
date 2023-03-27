@@ -336,20 +336,6 @@ main .notes {
     width: 65px !important;
   }
 
-  /* .orderRow .number1,
-  .orderRow .number2 ,
-  .orderRow .number3,
-  .orderRow .number4,
-  .orderRow .number5,
-  .orderRow .number6,
-  .orderRow .number7,
-  .orderRow .number8,
-  .orderRow .number9,
-  .orderRow .number10,
-  .orderRow .orderRowImg {
-    border-bottom: 4px solid rgb(255, 255, 255);
-  } */
-  
   .orderRow .playerID {
     display: none;
   }
@@ -594,7 +580,7 @@ main .notes {
 
 .turkcellProductSection {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
 }
 
@@ -673,10 +659,6 @@ main .notes {
    margin: 5px 20px 0 10px;
 }
 
-/* .plan-details-2 {
-    text-align: right;
-} */
-
 .order-review input{
    border: 1px solid green;
    border-radius: 10px;
@@ -697,12 +679,18 @@ main .notes {
 
 
 
-
-
 /**************/
 /**************/
 /*** Media ****/
 @media only screen and (max-width: 1200px) {
+
+    
+    .turkcellProductSection {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
     .sidebar {
         width: 70px;
     }
@@ -794,6 +782,13 @@ main .notes {
 
 
 @media only screen and (max-width: 960px) {
+
+    
+    .turkcellProductSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -867,6 +862,12 @@ main .notes {
 
 
 @media only screen and (max-width: 768px) {
+
+    .turkcellProductSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
     .cards {
         grid-template-columns: 100%;
     }
@@ -1052,13 +1053,7 @@ main .notes {
         display: block;
       }
 }   
-.orderRow .number4 {
-    width: 60px;
-}
 
-.orderRow .number9 {
-    width: 60px;
-}
 
 @media only screen and (max-width: 560px) {
     .cards {
