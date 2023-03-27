@@ -329,11 +329,11 @@ main .notes {
   .orderRow {
     display: table-row;
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .orderRow .number9 {
-    width: 65px !important;
+    width: 70px !important;
   }
 
   .orderRow .playerID {
