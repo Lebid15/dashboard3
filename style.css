@@ -328,7 +328,27 @@ main .notes {
   
   .orderRow {
     display: table-row;
+    text-align: center;
+    font-size: 12px;
   }
+
+  .orderRow .number9 {
+    width: 65px !important;
+  }
+
+  /* .orderRow .number1,
+  .orderRow .number2 ,
+  .orderRow .number3,
+  .orderRow .number4,
+  .orderRow .number5,
+  .orderRow .number6,
+  .orderRow .number7,
+  .orderRow .number8,
+  .orderRow .number9,
+  .orderRow .number10,
+  .orderRow .orderRowImg {
+    border-bottom: 4px solid rgb(255, 255, 255);
+  } */
   
   .orderRow .playerID {
     display: none;
@@ -341,15 +361,15 @@ main .notes {
   }
   
   .orderRow.completed > div {
-    background-color: #b3ffb3;
+    background-color: #c2e77d;
   }
   
   .orderRow.refused > div {
-    background-color: #ff9999;
+    background-color: #D7A594;
   }
   
   .orderRow.pending > div {
-    background-color: #ffff99;
+    background-color: #fff675;
   }
   
   .pagination {
@@ -1021,7 +1041,7 @@ main .notes {
       }
 
       .orderRow .product {
-        width: 127px !important;
+        width: 120px !important;
       }
 
       .orderRow .price {
@@ -1031,6 +1051,13 @@ main .notes {
       .orderRow .playerID {
         display: block;
       }
+}   
+.orderRow .number4 {
+    width: 60px;
+}
+
+.orderRow .number9 {
+    width: 60px;
 }
 
 @media only screen and (max-width: 560px) {
@@ -1118,6 +1145,7 @@ main .notes {
         display: flex;
         text-align: center;
         margin-bottom: 5px;
+        text-align: center;
       }
     
       .orderRow .number1,
@@ -1137,7 +1165,7 @@ main .notes {
       }
 
       .orderRow .product {
-        width: 127px !important;
+        width: 120px !important;
       }
 
       .orderRow .price {
@@ -1146,6 +1174,10 @@ main .notes {
 
       .orderRow .playerID {
         display: block;
+      }
+
+      .orderRow .number4 {
+        width: 60px;
       }
 
 }
