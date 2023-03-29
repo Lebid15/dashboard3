@@ -397,40 +397,43 @@ main .notes {
 /*** gameProductCard ****/
 
 .gameProductSection {
-    /* background-color: rgb(181, 196, 110); */
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
 }
 
 .gameProductCard {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: var(--balance-bg);
-    border: 1px solid green;
-    margin: 0.6rem 0.4rem;
-    border-radius: 10px;
     font-size: 0.9rem;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .gameProductCard:hover {
     box-shadow: none;
+    background-color: #c1e0d2;
 }
 
 .gameProductCardTitle {
-    border-radius: 10px;
-    width: 8rem;
-    height: 5rem;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .gameProductCardTitle p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-align: center;
+    width: 12rem;
+}
+
+.gameProductCardPrice {
+    padding: 0.5rem;
 }
 
 .gameProductCardPrice p {
     text-align: center;
-    padding: 0.3rem 0;
+    padding: 0.5rem 1.6rem;
     background: var(--header-bg);
     color: white;
     font-size: 0.9rem;
@@ -695,6 +698,13 @@ main .notes {
 @media only screen and (max-width: 1200px) {
 
     
+    .gameProductSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    
     .turkcellProductSection {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -794,6 +804,13 @@ main .notes {
 @media only screen and (max-width: 960px) {
 
     
+    .gameProductSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    
     .turkcellProductSection {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -872,6 +889,13 @@ main .notes {
 
 
 @media only screen and (max-width: 768px) {
+
+    
+    .gameProductSection {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
 
     .turkcellProductSection {
         display: grid;
@@ -1066,6 +1090,14 @@ main .notes {
 
 
 @media only screen and (max-width: 560px) {
+
+    
+    .gameProductSection {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
+
     .cards {
         grid-template-columns: 100%;
     }
