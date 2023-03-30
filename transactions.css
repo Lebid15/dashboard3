@@ -1,0 +1,121 @@
+
+/**************/
+/**************/
+/*** transactions قسم الحركات البنكية ****/
+
+.transactions {
+    font-size: 14px;
+    margin: 20px;
+
+  }
+
+  
+  /* Style for the transactions table */
+  .transactions table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Style for the transactions table header */
+  .transactions th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: right;
+  }
+  
+  /* Style for the transactions table rows */
+  .transactions td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: right;
+  }
+  
+  /* Style for the transactions table rows on even numbers */
+  .transactions tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style for the transactions table rows on odd numbers */
+  .transactions tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+  /* Style for the transactions table footer */
+  .transactions tfoot td {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    padding: 8px;
+    text-align: right;
+  }
+
+
+  /* ----------------------------------------- */
+
+  .transactions tr{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  .transactions thead {
+    display: none;
+  }
+  
+  /* Display the table rows as columns */
+  .transactions tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: right; /* Updated */
+  }
+  
+  /* Style the table cells */
+  .transactions tbody td {
+    text-align: right; /* Updated */
+  }
+  
+  /* Display the transaction label and value in separate rows */
+  .transactions tbody td:nth-child(1)::before {
+    content: "المعرف: ";
+    font-weight: bold;
+    text-align: right; /* Updated */
+  }
+  
+  .transactions tbody td:nth-child(1)::after {
+    text-align: right; /* Updated */
+  }
+  
+  .transactions tbody td:nth-child(2)::before {
+    content: "البنك: ";
+    font-weight: bold;
+    text-align: right; /* Updated */
+  }
+  
+  .transactions tbody td:nth-child(2)::after {
+    text-align: right; /* Updated */
+  }
+
+  .transactions tbody td:nth-child(3)::before {
+    content: "المبلغ: ";
+    font-weight: bold;
+    text-align: right; /* Updated */
+  }
+  
+  .transactions tbody td:nth-child(3)::after {
+    content: " ليرة";
+    text-align: right; /* Updated */
+  }
+  
+  .transactions tbody td:nth-child(4)::before {
+    content: "الملاحظة: ";
+    font-weight: bold;
+    text-align: right; /* Updated */
+  }
+  
+  .transactions tbody td:nth-child(5)::before {
+    content: "التاريخ: ";
+    font-weight: bold;
+    text-align: right; /* Updated */
+  }
