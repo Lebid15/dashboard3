@@ -745,6 +745,86 @@ main .notes {
 
 /**************/
 /**************/
+/*** قسم ارباحي profit ****/
+
+.profits {
+    padding: 0 20px;
+}
+
+.profits_filter {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.profits_history {
+    /* width: 270px; */
+    padding: 0px 10px 10px 10px;
+    /* background-color: rgb(223, 223, 206); */
+    margin: 0px 0 10px 0;
+    /* box-shadow: 1px 1px 17px -2px rgba(0,0,0,0.76); */
+    text-align: center;
+
+}
+
+.profits_history_child {
+    margin: 10px 0;
+}
+
+.profits_history_child input {
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+.profits_history_child button {
+    background-color: #43b4b4;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 70px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.profits_filters_by button {
+    background-color: #d66cd1;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.profits_result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;    
+}
+
+.profits_result .card {
+    box-shadow: -1px 19px 27px -4px rgba(0,0,0,0.76);
+    background-color: var(--header-bg);
+    width: 310px;
+    padding: 10px;
+    color: white;
+}
+
+.card-title {
+    color: rgb(238, 255, 0);
+    /* background-color: yellow; */
+    padding: 5px 20px;
+    width: 100px;
+    font-size: 16px;
+}
+
+.result_nums {
+    color: yellow;
+}
+
+
+
+/**************/
+/**************/
 /*** Media ****/
 @media only screen and (max-width: 1200px) {
 
@@ -854,6 +934,13 @@ main .notes {
 
 @media only screen and (max-width: 960px) {
 
+    .profits_result {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        
+    }
+
     
     .gameProductSection {
         display: grid;
@@ -940,6 +1027,13 @@ main .notes {
 
 
 @media only screen and (max-width: 768px) {
+
+    .profits_result {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        
+    }
 
     
     .gameProductSection {
@@ -1142,6 +1236,12 @@ main .notes {
 
 @media only screen and (max-width: 560px) {
 
+    .profits_result {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        
+    }
     
     .gameProductSection {
         display: grid;

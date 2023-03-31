@@ -117,9 +117,69 @@
       </header>
 
       <main>
-         <div class="cards-categories">
-            بروفايلي
-         </div>
+
+         <div class="profits">
+
+
+               <!-- ----------------------------- -->
+            <div class="profits_filter">
+
+                <div class="profits_history">
+                    <div class="profits_history_child">
+                        <label htmlFor="from_date" class="mr-2">من تاريخ</label>
+                        <input type="date" name="from_date" id="from_date" value={fromDate} />
+                    </div>
+                    <div  class="profits_history_child">
+                        <label htmlFor="to_date" class="mr-2">إلى تاريخ</label>
+                        <input type="date" name="to_date" id="to_date" value={toDate} />
+                    </div>
+                    <div class="profits_history_child">
+                         <button>عرض الأرباح</button>
+                    </div>
+                </div>
+
+                
+
+                <div class="profits_filters_by">
+                    <button >هذا اليوم</button>
+                    <button >هذا الشهر</button>
+                    <button >البارحة</button>
+
+                </div>
+
+            </div>
+            <!-- ------------------- -->
+
+                    <div class="profits_result">
+                        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">الجوال</h5>
+                                    <p>عدد طلبات الجوال المكتلمة: <span class="result_nums">5</span></p>
+                                    <p>الربح من بـــــــــــــــاقات الجوال: <span class="result_nums">20.30</span></p>
+                                </div>
+                           </div>
+                        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">الألعاب</h5>
+                                    <p>عدد طلبات الألعاب المكتلمة: <span class="result_nums">2</span></p>
+                                    <p>الربح من باقــــــــــــــات الألعاب: <span class="result_nums">12.35</span></p>
+                                </div>
+                           </div>
+                        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">المجموع</h5>
+                                    <p>عدد الطلبات الكلي: <span class="result_nums">7</span></p>
+                                    <p>الربـــــــــح الكلــــــــــي: <span class="result_nums">32.65</span></p>
+                                </div>
+                           </div>
+
+                    </div>
+        </div>
+
+
       </main>
 
 
