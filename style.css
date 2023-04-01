@@ -757,11 +757,8 @@ main .notes {
 }
 
 .profits_history {
-    /* width: 270px; */
     padding: 0px 10px 10px 10px;
-    /* background-color: rgb(223, 223, 206); */
     margin: 0px 0 10px 0;
-    /* box-shadow: 1px 1px 17px -2px rgba(0,0,0,0.76); */
     text-align: center;
 
 }
