@@ -1,167 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Harmattan&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <title>test</title>
+</head>
+
+<body>
+
+   <input type="checkbox" id="nav-toggle">
+   <!-- side bar section -->
+   <div class="sidebar">
+      <div class="sidebar-brand">
+         <img src="images/ahlaLG7.png" alt="logo">
+         <p>أهلا كارد</p>
+      </div>
+
+      <div class="sidebar-menu">
+         <ul>
+            <li>
+               <a href="index.html" class="active">
+                  <span class="material-symbols-outlined">home</span>
+                  <span>الصفحة الرئيسيّة</span>
+               </a>
+            </li>
+            <li>
+               <a href="games.html">
+                  <span class="material-symbols-outlined">stadia_controller</span>
+                  <span>شحن الالعاب</span>
+               </a>
+            </li>
+            <li>
+               <a href="phones.html">
+                  <span class="material-symbols-outlined">phone_iphone</span>
+                  <span>شحن الجوال</span>
+               </a>
+            </li>
+            <li>
+               <a href="billrecharge.html">
+                  <span class="material-symbols-outlined">receipt_long</span>
+                  <span>تسديد فواتير</span>
+               </a>
+            </li>
+            <li>
+               <a href="orders.html">
+                  <span class="material-symbols-outlined">list_alt</span>
+                  <span>طلبات الالعاب</span>
+               </a>
+            </li>
+            <li>
+               <a href="orders.html">
+                  <span class="material-symbols-outlined">list_alt</span>
+                  <span>طلبات الجوال</span>
+               </a>
+            </li>
+            <li>
+               <a href="orders.html">
+                  <span class="material-symbols-outlined">list_alt</span>
+                  <span>طلبات الفواتير</span>
+               </a>
+            </li>
+            <li>
+               <a href="profile.html">
+                  <span class="material-symbols-outlined">person</span>
+                  <span>الحركات البنكية</span>
+               </a>
+            </li>
+            <li>
+               <a href="profile.html">
+                  <span class="material-symbols-outlined">person</span>
+                  <span>أرباحي</span>
+               </a>
+            </li>
+            <li>
+               <a href="logout.html">
+                  <span class="material-symbols-outlined">logout</span>
+                  <span>تسجيل الخروج</span>
+               </a>
+            </li>
+            <div class="theme-toggler">
+               <span class="material-symbols-outlined active" >light_mode</span>
+               <span class="material-symbols-outlined">dark_mode</span>
+           </div>
+         </ul>
+      </div>
+   </div>
+
+   <!-- main content -->
+   <div class="main-content">
+
+      <header>
+         <h2>
+            <label for="nav-toggle">
+               <span class="material-symbols-outlined">menu</span>
+            </label>
+            <p class="headerTitle">الصفحة الرئيسيّة
+            <p>
+
+         </h2>
+
+         <div class="user-wrapper">
+            <div>
+               <p>عبد الرحمن الخليل </p>
+               <small>TRY 155530.22</small>
+            </div>
+         </div>
+      </header>
+
+      <main>
+
+         <div class="profits">
 
 
+               <!-- ----------------------------- -->
+            <div class="profits_filter">
 
-         <div className="profits">
-            <div className="profits_filter">
-                <div className="profits_history">
-                    <div className="profits_history_child">
-                        <label htmlFor="from_date" className="mr-2">من تاريخ</label>
-                        <input type="date" name="from_date" id="from_date" value={fromDate} onChange={(e) => setFromDate(e.target.value)} className="form-control" />
+                <div class="profits_history">
+                    <div class="profits_history_child">
+                        <label htmlFor="from_date" class="mr-2">من تاريخ</label>
+                        <input type="date" name="from_date" id="from_date" value={fromDate} />
                     </div>
-                    <div className="profits_history_child">
-                        <label htmlFor="to_date" className="mr-2">إلى تاريخ</label>
-                        <input type="date" name="to_date" id="to_date" value={toDate} onChange={(e) => setToDate(e.target.value)} className="form-control" />
+                    <div  class="profits_history_child">
+                        <label htmlFor="to_date" class="mr-2">إلى تاريخ</label>
+                        <input type="date" name="to_date" id="to_date" value={toDate} />
                     </div>
                     <div class="profits_history_child">
-                         <button onClick={fetchData} className="btn btn-success mb-4">عرض الأرباح</button>
+                         <button>عرض الأرباح</button>
                     </div>
                 </div>
 
-                <div className="profits_filters_by">
-                    <button onClick={async () => {
-                        setFromDate(today)
-                        setToDate(tomorrow)
-                        const response = await fetchProfit(today, tomorrow);
-                        setData(response);
-                    }} className="btn btn-primary mr-2 mb-2">اليوم</button>
-                    <button onClick={
-                        async () => {
-                            setFromDate(yesterday);
-                            setToDate(today);
-                            const response = await fetchProfit(yesterday, today);
-                            setData(response);
-                        }
-                    } className="btn btn-primary mr-2 mb-2">البارحة</button>
-                    <button onClick={async () => {
-                        setFromDate(getFirstDayOfMonth());
-                        setToDate(today);
-                        const response = await fetchProfit(getFirstDayOfMonth(), today);
-                        setData(response);
-                    }} className="btn btn-primary mr-2 mb-2">هذا الشهر</button>
+                
 
+                <div class="profits_filters_by">
+                    <button >هذا اليوم</button>
+                    <button >هذا الشهر</button>
+                    <button >البارحة</button>
 
                 </div>
-
-
-
 
             </div>
-            {data && (
-                <div className="profits_result">
+            <!-- ------------------- -->
 
-                         <div className="card">
-                              <div className="card-body">
-
-                                    <h5 className="card-title">الجوال</h5>
-                                    <p>عدد طلبات الجوال المكتلمة: <span class="result_nums">{data.orders_num}</span></p>
-                                    <p>الربح من بـــــــــــــــاقات الجوال: <span class="result_nums">{data.orders_profit}</span></p>
-                              </div>
-                        </div>
-
-                        <div className="card">
-                              <div className="card-body">
-                                    <h5 className="card-title">الألعاب</h5>
-                                    <p>عدد طلبات الألعاب المكتلمة: <span class="result_nums">{data.game_orders_num}</span></p>
-                                    <p>الربح من باقــــــــــــــات الألعاب: <span class="result_nums">{data.game_orders_profit}</span></p>
-                              </div>
-                        </div>
-
-                        <div className="card">
-                              <div className="card-body">
-                                    <h5 className="card-title">المجموع</h5>
-                                    <p>عدد الطلبات الكلي: <span class="result_nums">{data.all_orders_num}</span></p>
-                                    <p>الربـــــــــح الكلــــــــــي: <span class="result_nums">{data.all_orders_profit}</span></p>
-                              </div>
-                        </div>
+                    <div class="profits_result">
+                        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">الجوال</h5>
+                                    <p>عدد طلبات الجوال المكتلمة: <span class="result_nums">5</span></p>
+                                    <p>الربح من بـــــــــــــــاقات الجوال: <span class="result_nums">20.30</span></p>
+                                </div>
+                           </div>
+                        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">الألعاب</h5>
+                                    <p>عدد طلبات الألعاب المكتلمة: <span class="result_nums">2</span></p>
+                                    <p>الربح من باقــــــــــــــات الألعاب: <span class="result_nums">12.35</span></p>
+                                </div>
+                           </div>
+                        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">المجموع</h5>
+                                    <p>عدد الطلبات الكلي: <span class="result_nums">7</span></p>
+                                    <p>الربـــــــــح الكلــــــــــي: <span class="result_nums">32.65</span></p>
+                                </div>
+                           </div>
 
                     </div>
-                </div>
-            )}
         </div>
 
 
-
-        
-/**************/
-/**************/
-/*** قسم ارباحي profit ****/
-
-.profits {
-    padding: 0 20px;
-}
-
-.profits_filter {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.profits_history {
-    padding: 0px 10px 10px 10px;
-    margin: 0px 0 10px 0;
-    text-align: center;
-
-}
-
-.profits_history_child {
-    margin: 10px 0;
-}
-
-.profits_history_child input {
-    padding: 5px;
-    border: 1px solid green;
-    border-radius: 10px;
-}
-.profits_history_child button {
-    background-color: #43b4b4;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 70px;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-}
-
-.profits_filters_by button {
-    background-color: #d66cd1;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 15px;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-}
-
-.profits_result {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;    
-}
-
-.profits_result .card {
-    box-shadow: -1px 19px 27px -4px rgba(0,0,0,0.76);
-    background-color: var(--header-bg);
-    width: 310px;
-    padding: 10px;
-    color: white;
-}
-
-.card-title {
-    color: rgb(238, 255, 0);
-    /* background-color: yellow; */
-    padding: 5px 20px;
-    width: 100px;
-    font-size: 16px;
-}
-
-.result_nums {
-    color: yellow;
-}
+      </main>
 
 
+   </div>
+   <script src="main.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
 
-.profits_result {
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-gap: 1rem;
-     
- }
+
+</body>
+
+</html>
