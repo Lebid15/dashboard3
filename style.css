@@ -285,7 +285,7 @@ main .notes {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     margin: 0 auto;
     margin-top: 1rem;
@@ -320,14 +320,50 @@ main .notes {
     font-size: 1rem;
 }
 
-/*****banks design*******/
+/*****banks design بطاقات حساباتنا البنكية *******/
 .banks-header {
     margin-top: 70px;
     justify-content: center;
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1em;
+    direction: ltr;
 }
 
+.banks_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .banks_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid green;
+    background-color: var(--balance-bg);
+    color: var(--black-white-mode-text);
+  }
+  
+  .banks_title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+    background-color: var(--balance-bg);
+    color: var(--black-white-mode-text);
+    padding: 5px 0;
+  }
+
+  .banks_title img {
+    /* margin-left: 30px; */
+    width: 70px;
+  }
+  
+ .banks_content {
+  text-align: left;
+  font-size: 14px;
+  padding: 0 15px 10px 15px;
+}
 
 /**************/
 /**************/
@@ -858,6 +894,13 @@ main .notes {
 @media only screen and (max-width: 1200px) {
 
     
+    .banks_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    
     .gameProductSection {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -963,6 +1006,13 @@ main .notes {
 
 @media only screen and (max-width: 960px) {
 
+    
+    .banks_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
     .profits_result {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1056,6 +1106,13 @@ main .notes {
 
 
 @media only screen and (max-width: 768px) {
+
+    
+    .banks_cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
 
     .profits_result {
         display: grid;
@@ -1264,6 +1321,13 @@ main .notes {
 
 
 @media only screen and (max-width: 560px) {
+
+    
+    .banks_cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
 
     .profits_result {
         display: grid;
