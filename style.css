@@ -322,7 +322,7 @@ main .notes {
 
 /*****banks design بطاقات حساباتنا البنكية *******/
 .banks-header {
-    margin-top: 70px;
+    margin-top: 10px;
     justify-content: center;
     text-align: center;
     font-size: 1em;
@@ -330,11 +330,20 @@ main .notes {
 }
 
 .banks_cards {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    justify-content: center;
+    text-align: center;
   }
-  
+
+  .header-title {
+    margin: 50px auto 0px auto;
+    text-align: center;
+    justify-content: center;
+  }
+
   .banks_card {
     display: flex;
     flex-direction: column;
@@ -343,7 +352,7 @@ main .notes {
     background-color: var(--balance-bg);
     color: var(--black-white-mode-text);
   }
-  
+
   .banks_title {
     display: flex;
     align-items: center;
