@@ -899,6 +899,82 @@ main .notes {
 
 /**************/
 /**************/
+/*** team فريق العمل ****/
+
+.WhatsApp {
+    align-items: center;
+    text-align: center;
+    background-color: rgb(194, 233, 204);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: right;
+    justify-content: right;
+    width: 320px;
+    margin: 20px auto 0px auto;
+    font-size: 14px;
+}
+
+.WhatsApp .whats_1, 
+.WhatsApp .whats_2 {
+    margin: 10px;
+}
+
+.whats_all{
+    display: flex;
+}
+
+.whats_all p{
+    margin: 0 5px;
+}
+
+
+.socialMediaAll {
+    align-items: center;
+    text-align: center;
+    display: block;
+    text-align: right;
+    justify-content: right;
+    width: 300px;
+    margin: 20px auto 0px auto;
+    padding: 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 40px;
+    color: #9c9c9c;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-icons .fab.fa-facebook:hover {
+    color: #3b5998;
+  }
+  
+  .social-icons .fab.fa-youtube:hover {
+    color: #c4302b;
+  }
+  
+  .social-icons .fab.fa-instagram:hover {
+    color: #e1306c;
+  }
+  
+  .social-icons .fab.fa-tiktok:hover {
+    color: #000;
+  }
+
+/**************/
+/**************/
 /*** Media ****/
 @media only screen and (max-width: 1200px) {
 
