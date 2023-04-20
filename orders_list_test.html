@@ -82,17 +82,14 @@
                 {% endif %}
             </div>
 
-            <div>
+            <div class="number9">
+                <div>{{ order.purchase_date|date:"Y-m-d" }}</div>
+                <div>{{ order.purchase_date|date:"H:i" }}</div>
+                <button onclick="location.href='{% url 'order_detail' order.pk %}'">طباعة</button>
 
-                <div class="number9">
-                    <div>{{ order.purchase_date|date:"Y-m-d" }}</div>
-                    <div>{{ order.purchase_date|date:"H:i" }}</div>
-                    <button onclick="location.href='{% url 'order_detail' order.pk %}'">طباعة</button>
-
-
-                </div>
 
             </div>
+
 
         </div>
 

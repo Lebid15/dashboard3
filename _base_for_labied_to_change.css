@@ -361,7 +361,6 @@ main .notes {
 
 
 
-
 /**************/
 /**************/
 /*** ORDERS قسم الاوردر ****/
@@ -369,19 +368,55 @@ main .notes {
     display: table;
     width: 100%;
     border-collapse: collapse;
+    align-items: center !important;
   }
+
+.orderRowHead {
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
   
-  .orderRow {
+.orderRow {
     display: table-row;
     text-align: center;
     font-size: 13px;
+    align-items: center !important;
+    border-bottom: 3px solid rgb(255, 255, 253);
+}
+
+.operatorImg {
+    width: 30px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+}
+
+
+.orderRowImg {
+    width: 45px;
+}
+
+.orderPrint {
+    margin-bottom: -8px;
+}
+
+.playerID {
+    display: none;
+}
+
+  .operatorImg {
+    width: 30px;
+    border-radius: 10px;
+}
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product p.playerID {
+    display: none;
   }
 
-
-
-  .orderRow .number9 {
-    width: 70px !important;
-  }
 
   .orderRow .playerID {
     display: none;
@@ -393,30 +428,37 @@ main .notes {
     border: 1px solid #ddd;
   }
   
-  .orderRow.C > div {
-    background-color: #c2e77d;
+  .orderRow.completed > div {
+    background-color: #dcf88e;
+    color: black;
+  }
+  
+  .orderRow.completed:hover > div {
+    background-color: #c2e08a;
     color: black;
   }
 
   
-  .orderRow.X > div {
-    background-color: #D7A594;
+  .orderRow.refused > div {
+    background-color: #f1bcaa;
     color: black;
   }
   
-  .orderRow.P > div {
+  .orderRow.refused:hover > div {
+    background-color: #dbb0a1;
+    color: black;
+  }
+  
+  .orderRow.pending > div {
     background-color: #fff675;
+    color: black;
+  }
+  
+  .orderRow.pending:hover > div {
+    background-color: #e9e170;
     color: black;
   }
 
-  .orderRow.Z > div {
-    background-color: #fff675;
-    color: black;
-  }
-  
-  .orderRow:hover> div {
-    color: rgb(0, 60, 255);
-  }
 
   .pagination {
     display: flex;
@@ -1263,14 +1305,14 @@ main .notes {
         margin-right: 3.5rem;
     }
 
-    
     /* الاوردر للجوال */
 
     .orderRow {
         font-size: 10px;
-        display: flex;
+        display: table-row;
         text-align: center;
         margin-bottom: 5px;
+        align-items: center;
       }
     
       .orderRow .number1,
@@ -1401,13 +1443,18 @@ main .notes {
 
     .orderRow {
         font-size: 10px;
-        display: flex;
+        display: table-row;
         text-align: center;
-        margin-bottom: 5px;
         text-align: center;
       }
+
+      .operatorImg {
+        width: 30px;
+        border-radius: 10px;
+        margin-bottom: -25px;
+    }
     
-      .orderRow .number1,
+    .orderRow .number1,
       .number3,
       .number5,
       .number7,
@@ -1442,7 +1489,7 @@ main .notes {
       .transactions tr{
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
-    
+
       .transactions thead {
         display: none;
       }

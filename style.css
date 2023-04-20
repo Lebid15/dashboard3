@@ -432,19 +432,55 @@ main .notes {
     display: table;
     width: 100%;
     border-collapse: collapse;
+    align-items: center !important;
   }
+
+.orderRowHead {
+    background-color: rgb(255, 255, 255);
+    font-weight: bold;
+}
   
-  .orderRow {
+.orderRow {
     display: table-row;
     text-align: center;
     font-size: 13px;
+    align-items: center !important;
+    border-bottom: 3px solid rgb(255, 255, 253);
+}
+
+.operatorImg {
+    width: 30px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+}
+
+
+.orderRowImg {
+    width: 45px;
+}
+
+.orderPrint {
+    margin-bottom: -8px;
+}
+
+.playerID {
+    display: none;
+}
+
+  .operatorImg {
+    width: 30px;
+    border-radius: 10px;
+}
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product p.playerID {
+    display: none;
   }
 
-
-
-  .orderRow .number9 {
-    width: 70px !important;
-  }
 
   .orderRow .playerID {
     display: none;
@@ -457,13 +493,23 @@ main .notes {
   }
   
   .orderRow.completed > div {
-    background-color: #c2e77d;
+    background-color: #dcf88e;
+    color: black;
+  }
+  
+  .orderRow.completed:hover > div {
+    background-color: #c2e08a;
     color: black;
   }
 
   
   .orderRow.refused > div {
-    background-color: #D7A594;
+    background-color: #f1bcaa;
+    color: black;
+  }
+  
+  .orderRow.refused:hover > div {
+    background-color: #dbb0a1;
     color: black;
   }
   
@@ -472,8 +518,9 @@ main .notes {
     color: black;
   }
   
-  .orderRow:hover> div {
-    color: rgb(0, 60, 255);
+  .orderRow.pending:hover > div {
+    background-color: #e9e170;
+    color: black;
   }
 
   .pagination {
@@ -1370,9 +1417,10 @@ main .notes {
 
     .orderRow {
         font-size: 10px;
-        display: flex;
+        display: table-row;
         text-align: center;
         margin-bottom: 5px;
+        align-items: center;
       }
     
       .orderRow .number1,
@@ -1508,11 +1556,18 @@ main .notes {
 
     .orderRow {
         font-size: 10px;
-        display: flex;
+        display: table-row;
         text-align: center;
-        margin-bottom: 5px;
         text-align: center;
       }
+
+      
+.operatorImg {
+    width: 30px;
+    border-radius: 10px;
+    margin-bottom: -25px;
+}
+
     
       .orderRow .number1,
       .number3,
