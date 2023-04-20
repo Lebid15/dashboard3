@@ -83,9 +83,7 @@
             </div>
 
             <div class="number9">
-                <div>{{ order.purchase_date|date:"Y-m-d" }}</div>
-                <div>{{ order.purchase_date|date:"H:i" }}</div>
-                <button onclick="location.href='{% url 'order_detail' order.pk %}'">طباعة</button>
+                <div><span>{{ order.purchase_date|date:"Y-m-d" }}</span> <span>{{ order.purchase_date|date:"H:i" }}</span> <span><button onclick="location.href='{% url 'order_detail' order.pk %}'">طباعة</button></span></div>                
 
 
             </div>
