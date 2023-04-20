@@ -1,0 +1,1719 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600&family=Tajawal:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:wght@300;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+:root {
+    --body-sidebar-bg: #ffffff;
+    --main-bg: #EFEAE2;
+    --header-bg: #00A884;
+    --balance-bg: #ffffffac;
+    --black-white-mode-text: #000000;
+    --header-text: #ffffff;
+    --transaction-table-bg-even: #DCDCDC;
+    --transaction-table-bg-odd: #66CDAA;  
+
+}
+
+.dark-theme-variables {
+    --body-sidebar-bg: #111b21;
+    --main-bg: #0B141A;
+    --header-bg: #202C33;
+    --balance-bg: #005C4B;
+    --black-white-mode-text: #e4e4e4;
+    --header-text: #ffffff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    
+}
+
+
+
+body {
+    background-color: var(--body-sidebar-bg) !important;
+}
+
+.theme-toggler {
+    /* background-color: var(--main-bg); */
+    display: block;
+    justify-content: space-between;
+    height: 1.6rem;
+    width: 2rem;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggler span {
+    background-color: rgb(0, 197, 144);
+    border-radius: 50px;
+    font-size: 1.2rem;
+    width: 25px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.theme-toggler span.active {
+    background: var(--body-sidebar-bg) !important;
+    color: var(--black-white-mode-text);
+    border-radius: 10px;
+}
+
+.sidebar {
+    direction: rtl;
+    width: 345px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: var(--body-sidebar-bg);
+    z-index: 100;
+    transition: margin-right 300ms;
+}
+
+.sidebar-brand {
+    display: flex;
+    text-align: center;
+    height: 90px;
+    padding: 0rem 1rem 1rem 0rem;
+    color: var(--black-white-mode-text);
+    font-size: 0.7rem;
+    align-items: center;
+    justify-content: right;
+    text-align: center;
+}
+
+.sidebar-brand img {
+    width: 90px;
+    height: auto;
+    margin-top: 0.9rem;
+    margin-left: 1rem;
+}
+
+.sidebar-brand p {
+    display: flex;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--black-white-mode-text);
+    margin-top: 1rem;
+}
+
+/*الايقونات كاملة*/
+.sidebar-menu li {
+    width: 100%;
+}
+
+.sidebar-menu li:hover {
+    background-color: var(--main-bg);
+}
+
+/*--------الايقونات كاملة بداخلها النصوص----------*/
+.sidebar-menu a {
+    display: flex;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.sidebar-menu span {
+    color: var(--black-white-mode-text);
+}
+
+.sidebar-menu a span:first-child {
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.sidebar-menu a span:nth-child(2) {
+    font-size: 1rem;
+}
+
+#nav-toggle:checked+.sidebar {
+    width: 70px;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand {
+    padding-right: 0rem;
+    text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li {
+    padding-right: 1rem;
+    text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li a {
+    padding-right: 0rem;
+}
+
+#nav-toggle:checked+.sidebar li a span {
+    padding-left: 1rem;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand p span:last-child,
+#nav-toggle:checked+.sidebar li a span:last-child {
+    display: none;
+}
+
+#nav-toggle:checked~.main-content {
+    margin-right: 70px;
+}
+
+#nav-toggle:checked~.main-content header {
+    width: calc(100% - 70px);
+    right: 70px;
+}
+
+.sidebar-brand img {
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+.sidebar-menu {
+    margin-top: 1rem;
+}
+
+.main-content {
+    direction: rtl;
+    transition: margin-right 300ms;
+    margin-right: 345px;
+}
+
+/*-------- header ---------*/
+header {
+    background: var(--header-bg);
+    color: var(--black-white-mode-text);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem 1rem;
+    box-shadow: rgba(140, 140, 150, 0.1) 0px 1px 0px;
+    border-right: 1px solid var(--body-sidebar-bg);
+    position: fixed;
+    right: 345px;
+    width: calc(100% - 345px);
+    top: 0;
+    z-index: 100;
+    transition: right 300ms;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+header h2 {
+    display: flex;
+    font-size: 0.98rem;
+    align-items: center;
+}
+
+/*----الثلث شخطات فوق بعض*----*/
+header label span {
+    font-size: 2.5rem;
+    padding-left: 0.4rem;
+    padding-top: 9px;
+    color: var(--header-text);
+    cursor: pointer;
+}
+
+header h2 p {
+    text-align: center;
+    padding-left: 0rem;
+    font-size: 0.9rem;
+    color: var(--header-text);
+    font-weight: 500;
+}
+
+.user-wrapper p {
+    font-size: 0.85rem !important;
+    text-align: center;
+    color: var(--header-text);
+}
+
+.user-wrapper small {
+    font-size: 0.9rem !important;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--header-text);
+}
+
+.user-wrapper .nakdi {
+    font-size: 0.9rem !important;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--header-text);
+    background-color: black;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+
+.user-wrapper .dain {
+    font-size: 0.9rem !important;
+    letter-spacing: 1px;
+    text-align: center;
+    color: var(--header-text);
+    background-color: red;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+
+.card-single-categories img {
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+
+/*-------main-------*/
+main {
+    display: block;
+    direction: rtl;
+    margin-top: 90px;
+    padding: 2rem 1.1rem;
+    background: var(--main-bg);
+    min-height: calc(100vh - 90px);
+    color: var(--black-white-mode-text);
+}
+
+main .notes {
+    margin-top: 70px;
+    letter-spacing: .5px;
+    font-size: 0.9rem;
+}
+
+.notes p a {
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(0, 198, 106);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-single {
+    display: flex;
+    justify-content: space-between;
+    background: var(--balance-bg);
+    padding: 1.3rem 0rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.balanceAndID {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.balanceAndID .nakdi2 {
+    
+    color: var(--header-text);
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.balanceAndID .dain2 {
+    
+    color: var(--header-text);
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.balanceAndID .rakam_m {
+    color: var(--header-text);
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-single p {
+    color: var(--black-white-mode-text);
+    font-size: 1.3rem;
+    font-family: 'Segoe UI Regular' !important;
+}
+
+.card-single div:first-child span {
+    color: var(--black-white-mode-text);
+    font-size: 1rem;
+}
+
+
+
+
+/**************/
+/**************/
+/*** ORDERS قسم الاوردر ****/
+.orderSection {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .orderRow {
+    display: table-row;
+    text-align: center;
+    font-size: 13px;
+  }
+
+
+
+  .orderRow .number9 {
+    width: 70px !important;
+  }
+
+  .orderRow .playerID {
+    display: none;
+  }
+
+  .orderRow > div {
+    display: table-cell;
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .orderRow.C > div {
+    background-color: #c2e77d;
+    color: black;
+  }
+
+  
+  .orderRow.X > div {
+    background-color: #D7A594;
+    color: black;
+  }
+  
+  .orderRow.P > div {
+    background-color: #fff675;
+    color: black;
+  }
+
+  .orderRow.Z > div {
+    background-color: #fff675;
+    color: black;
+  }
+  
+  .orderRow:hover> div {
+    color: rgb(0, 60, 255);
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.step-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #1a1a1a;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.step-links a:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.current {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.first-page,
+.last-page {
+    font-size: 16px;
+}
+
+.step-links a.page-link {
+    margin: 0 5px;
+}
+
+/**************/
+/**************/
+/*** gameProductCard ****/
+.gameHeader {
+    background-color: var(--header-bg);
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+    margin: 0px auto 20px auto;
+    align-items: center;
+    color: white;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    font-size: 14px;
+    /* box-shadow: 0px -1px 20px 0px rgba(0,0,0,0.75); */
+}
+
+.gameHeader img {
+    width: 55px;
+    border-radius: 10px;
+}
+
+.gameProductSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.gameProductCard {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--balance-bg);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.gameProductCard:hover {
+    box-shadow: none;
+    background-color: #c1e0d2;
+}
+
+.gameProductCardTitle {
+    padding: 0.5rem;
+}
+
+.gameProductCardTitle p {
+    font-size: 0.85rem;
+    text-align: center;
+    width: 12rem;
+}
+
+.gameProductCardPrice {
+    padding: 0.5rem;
+}
+
+.gameProductCardPrice p {
+    text-align: center;
+    padding: 0.5rem 1.6rem;
+    background: var(--header-bg);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/******* قسم الالعاب ******/
+.game_section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameElement {
+    width: 7vw;
+    height: 15vh;
+    padding: 10px 0px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gameElement p {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.02rem;
+    font-family: 'Noto Naskh Arabic', serif;
+}
+
+.gameElement img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 20px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+.gameElement .imgAndTitle:hover img {
+    opacity: 0.8;
+}
+
+.game_section a {
+    color: var(--black-white-mode-text);
+}
+
+
+/******* قسم الجوال ******/
+.phone_section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.phoneElement {
+    width: 7vw;
+    height: 15vh;
+    padding: 10px 0px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.phoneElement p {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.02rem;
+    font-family: 'Noto Naskh Arabic', serif;
+}
+
+.phoneElement img {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 20px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .1s ease-in-out;
+}
+
+.phoneElement .phone_imgAndTitle:hover img {
+    opacity: 0.8;
+}
+
+.phone_section a {
+    color: var(--black-white-mode-text);
+}
+
+.phoneNum_check input {
+    margin: 10px 0px 10px 5px;
+    width: 170px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.phoneNum_check button {
+    background-color: var(--header-bg);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.phoneNum_check button:hover {
+    background-color: white;
+    color: #43b4b4;
+    border: 1px solid #43b4b4;
+}
+
+.phoneNum_check {
+    padding: 5px 20px 5px 10px;
+}
+
+/*  قسم الجوال المرحلة الثانية السوركولا */
+
+.turkcellProductFilter {
+    justify-content: center;
+    text-align: center;
+}
+
+
+.phoneNum_sorgula input {
+    margin: 0px 0px 0px 5px;
+    
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid green;
+}
+
+.phoneNum_sorgula {
+    padding: 5px 20px 5px 10px;
+}
+
+.operator_tips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 12px;
+}
+
+.operator_tips__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(64, 65, 66);
+    margin: 10px 4px;
+    cursor: pointer;
+    margin: 16px 8px;
+}
+
+.operator_tips__item:hover {
+    color: rgb(255, 0, 0);
+}
+
+.operator_tips__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.operator_tips__text {
+    margin: 0;
+}
+
+
+
+.turkcellProductSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.turkcellProductCard {
+    display: inline;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--balance-bg);
+    margin: 0.2rem 0.3rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.turkcellProductCard:hover {
+    background-color: rgb(220, 221, 218);
+    box-shadow: rgba(238, 255, 0, 0.24) 0px 3px 8px;
+}
+
+.turkcellLeft {
+    float: left;
+    margin: 0.2rem;
+    height: 3rem;
+    width: 6rem;
+    color: white;
+    padding: 0.5rem;
+    background: #7c84fd;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.turkcellRight {
+    display: block;
+    text-align: center;
+}
+
+.turkcellProductCardName {
+    text-align: center;
+}
+
+.turkcellProductCardName p {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 0.85rem;
+}
+
+.turkcellProductCardTitle {
+    direction: ltr;
+    text-align: center;
+    color: rgb(190, 132, 24);
+}
+
+/* المرحلة الثالثة من قسم الجوال */
+
+.order-review {
+    background-color: rgb(230, 229, 220);
+    text-align: center;
+    width: 300px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.plan-details {
+    width: 100%;
+    background-color: rgb(214, 213, 201);
+    display:inline-block;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+    direction: ltr;
+}
+
+.plan-details img{
+   width: 70px;
+   margin: 5px 20px 0 10px;
+}
+
+.order-review input{
+   border: 1px solid green;
+   border-radius: 10px;
+   width: 150px;
+   margin: 5px 5px 40px 5px;
+   padding: 5px;
+}
+
+.plan-details-2 button{
+    background-color: #43b4b4;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/**************/
+/**************/
+/*** قسم ارباحي profit ****/
+
+.profits {
+    padding: 0 20px;
+}
+
+.profits_filter {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.profits_history {
+    padding: 0px 10px 10px 10px;
+    margin: 0px 0 10px 0;
+    text-align: center;
+
+}
+
+.profits_history_child {
+    margin: 10px 0;
+}
+
+.profits_history_child input {
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+.profits_history_child button {
+    background-color: var(--header-bg);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 70px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.profits_filters_by button {
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.profits_result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;    
+}
+
+.profits_result .card {
+    /* box-shadow: -1px 19px 27px -4px rgba(0,0,0,0.76); */
+    background-color: var(--header-bg);
+    width: 310px;
+    padding: 10px;
+    color: white;
+}
+
+.card-title {
+    color: rgb(238, 255, 0);
+    /* background-color: yellow; */
+    padding: 5px 20px;
+    width: 100px;
+    font-size: 16px;
+}
+
+.result_nums {
+    color: yellow;
+    direction: rtl;
+}
+
+
+
+/**************/
+/**************/
+/*** Media ****/
+@media only screen and (max-width: 1200px) {
+
+    
+.profits_result {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    
+}
+
+
+    .gameProductSection {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    
+    .turkcellProductSection {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .cards-banks {
+        grid-template-columns: 100%;
+    }
+
+    .game_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gameElement {
+        width: 9vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gameElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .gameElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .phone_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .phoneElement {
+        width: 9vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .phoneElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .sidebar li {
+        padding-right: 1rem;
+        text-align: center;
+    }
+
+    .sidebar .sidebar-brand {
+        padding-right: 0rem;
+        text-align: center;
+    }
+
+    .sidebar li a {
+        padding-right: 0rem;
+    }
+
+    .sidebar .sidebar-brand p span:last-child,
+    .sidebar li a span:last-child {
+        display: none;
+    }
+
+    .main-content {
+        margin-right: 70px;
+    }
+
+    .main-content header {
+        width: calc(100% - 70px);
+        right: 70px;
+    }
+}
+
+/*-------------------------------------*/
+
+
+@media only screen and (max-width: 960px) {
+
+    
+.profits_result {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    
+}
+    .gameProductSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    
+    .turkcellProductSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .game_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gameElement {
+        width: 10vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gameElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .gameElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .phone_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .phoneElement {
+        width: 10vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .phoneElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .cards-banks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cards-categories {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .recent-grid {
+        grid-template-columns: 100%;
+    }
+
+    .search-wrapper {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 80%;
+        margin: 10px 0;
+      }
+    
+.profits_result {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    
+}
+
+    .gameProductSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+
+    .turkcellProductSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+    .cards {
+        grid-template-columns: 100%;
+    }
+
+    .game_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gameElement {
+        width: 12vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gameElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .gameElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .phone_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .phoneElement {
+        width: 12vw;
+        margin: 0rem 1rem 1rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .phoneElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+
+    .cards-banks {
+        grid-template-columns: 100%;
+    }
+
+    .cards-categories {
+        grid-template-columns: 100%;
+    }
+
+    .recent-grid {
+        grid-template-columns: 100%;
+    }
+
+    .search-wrapper {
+        display: none;
+    }
+
+    .sidebar {
+        right: -100% !important;
+        background: var(--body-sidebar-bg);
+    }
+
+    header h2 {
+        display: flex;
+        align-items: center;
+    }
+
+    header h2 label {
+        display: inline-block;
+        text-align: center;
+        background: var(--header-bg);
+        border-radius: 50%;
+        color: var(--black-white-mode-text);
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
+    }
+
+    header h2 span {
+        text-align: center;
+        padding-right: 0rem;
+        padding-top: 0px !important;
+
+
+    }
+
+    header h2 .headerTitle {
+        text-align: center;
+        padding-left: 0rem;
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        width: 100%;
+        padding-left: 0rem;
+    }
+
+    header {
+        width: 100% !important;
+        right: 0 !important;
+        background: var(--header-bg);
+    }
+
+    #nav-toggle:checked+.sidebar {
+        right: 0 !important;
+        z-index: 100;
+        width: 100%;
+    }
+
+    #nav-toggle:checked+.sidebar .sidebar-brand,
+    #nav-toggle:checked+.sidebar li {
+        padding-right: 2rem;
+        text-align: right;
+    }
+
+    #nav-toggle:checked+.sidebar li a {
+        padding-right: 1rem;
+    }
+
+    #nav-toggle:checked+.sidebar .sidebar-brand p span:last-child,
+    #nav-toggle:checked+.sidebar li a span:last-child {
+        display: inline;
+    }
+
+    #nav-toggle:checked~.main-content {
+        margin-right: 0rem !important;
+    }
+
+    .theme-toggler {
+        display: flex;
+        margin-right: 3.5rem;
+    }
+
+    
+    /* الاوردر للجوال */
+
+    .orderRow {
+        font-size: 10px;
+        display: flex;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    
+      .orderRow .number1,
+      .number3,
+      .number5,
+      .number7,
+      .number6 {
+        display: none !important;
+      }
+    
+      .orderRow .number2 {
+        width: 120px !important;
+      }
+    
+      .tableHidden {
+        display: none !important;
+      }
+
+      .orderRow .product {
+        width: 120px !important;
+      }
+
+      .orderRow .price {
+        width: 60px !important;
+      }
+
+      .orderRow .playerID {
+        display: block;
+      }
+}   
+
+
+@media only screen and (max-width: 560px) {
+    .card {
+        width: 80%;
+        margin: 10px 0;
+      }
+.profits_result {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    
+}
+    .gameProductSection {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .cards {
+        grid-template-columns: 100%;
+    }
+
+    .game_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gameElement {
+        width: 21vw;
+        margin: 0rem 1rem 1.5rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gameElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+
+    .gameElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .phone_section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .phoneElement {
+        width: 21vw;
+        margin: 0rem 1rem 1.5rem 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneElement p {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+    }
+
+    .phoneElement img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+
+    .theme-toggler {
+        display: flex;
+        margin-right: 3.5rem;
+    }
+
+    .cards-banks {
+        grid-template-columns: 100%;
+    }
+
+    .gameProductCardTitle {
+        border-radius: 10px;
+        width: 5.8rem;
+        height: 4rem;
+        padding: 0.5rem 0rem;
+    }
+
+    .turkcellProductSection {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
+
+    /* الاوردر للجوال */
+
+    .orderRow {
+        font-size: 10px;
+        display: flex;
+        text-align: center;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+    
+      .orderRow .number1,
+      .number3,
+      .number5,
+      .number7,
+      .number6 {
+        display: none !important;
+      }
+    
+      .orderRow .number2 {
+        width: 120px !important;
+      }
+    
+      .tableHidden {
+        display: none !important;
+      }
+
+      .orderRow .product {
+        width: 120px !important;
+      }
+
+      .orderRow .price {
+        width: 60px !important;
+      }
+
+      .orderRow .playerID {
+        display: block;
+      }
+
+      .orderRow .number4 {
+        width: 60px;
+      }
+
+      .transactions tr{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+    
+      .transactions thead {
+        display: none;
+      }
+      
+      /* Display the table rows as columns */
+      .transactions tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        /* border: 1px solid #ddd; */
+        border: none;
+        padding: 8px;
+        text-align: right; /* Updated */
+      }
+      
+      /* Style the table cells */
+      .transactions tbody td {
+        text-align: right; /* Updated */
+        border: none;
+      }
+      
+      /* Display the transaction label and value in separate rows */
+      .transactions tbody td:nth-child(1)::before {
+        content: "رقم الطلب: ";
+        font-weight: bold;
+        text-align: right; /* Updated */
+      }
+      
+      .transactions tbody td:nth-child(1)::after {
+        text-align: right; /* Updated */
+      }
+      
+      .transactions tbody td:nth-child(2)::before {
+        content: "البنك: ";
+        font-weight: bold;
+        text-align: right; /* Updated */
+      }
+      
+      .transactions tbody td:nth-child(2)::after {
+        text-align: right; /* Updated */
+      }
+    
+      .transactions tbody td:nth-child(3)::before {
+        content: "المبلغ: ";
+        font-weight: bold;
+        text-align: right; /* Updated */
+      }
+      
+      .transactions tbody td:nth-child(3)::after {
+        content: " ليرة";
+        text-align: right; /* Updated */
+      }
+      .transactions tbody td:nth-child(4)::before {
+        content: "دين: ";
+        font-weight: bold;
+        text-align: right; /* Updated */
+      }
+      
+      .transactions tbody td:nth-child(4)::after {
+        content: " ليرة";
+        text-align: right; /* Updated */
+      }
+      
+      .transactions tbody td:nth-child(5)::before {
+        content: "الملاحظة: ";
+        font-weight: bold;
+        text-align: right; /* Updated */
+      }
+      
+      .transactions tbody td:nth-child(6)::before {
+        content: "التاريخ: ";
+        font-weight: bold;
+        text-align: right; /* Updated */
+      }
+
+}
+
+.btn-ok {
+    background-color: var(--header-bg);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 30px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-ok:hover {
+    background-color: #00C09B;
+}
+
+.sorgula_page_logo {
+    width: 50px;
+    border-radius: 10px;
+}
+
+.sorgula_page_logo_iii {
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+}
+
+.active {
+    color: rgb(255, 0, 0);
+}
+
+/**************/
+/**************/
+/*** transactions قسم الحركات البنكية ****/
+
+.transactions {
+    font-size: 14px;
+    margin: 20px;
+
+  }
+
+  
+  /* Style for the transactions table */
+  .transactions table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Style for the transactions table header */
+  .transactions th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: right;
+  }
+  
+  /* Style for the transactions table rows */
+  .transactions td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: right;
+  }
+  
+  /* Style for the transactions table rows on even numbers */
+  .transactions tr:nth-child(even) {
+    background-color: var(--transaction-table-bg-even);
+  }
+  
+  /* Style for the transactions table rows on odd numbers */
+  .transactions tr:nth-child(odd) {
+    background-color: var(--transaction-table-bg-odd);
+  }
+  
+  /* Style for the transactions table footer */
+  .transactions tfoot td {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    padding: 8px;
+    text-align: right;
+  }
+
+  /*****banks design بطاقات حساباتنا البنكية *******/
+.banks-header {
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    direction: ltr;
+}
+
+.banks_cards {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-title {
+    margin: 50px auto 0px auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .banks_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid green;
+    background-color: var(--balance-bg);
+    color: var(--black-white-mode-text);
+  }
+
+  .banks_title {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+    background-color: var(--balance-bg);
+    color: var(--black-white-mode-text);
+    padding: 5px 0;
+  }
+
+  .banks_title img {
+    /* margin-left: 30px; */
+    width: 70px;
+  }
+  
+ .banks_content {
+  text-align: left;
+  font-size: 14px;
+  padding: 0 15px 10px 15px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    direction: ltr;
+  }
+
+  .card {
+    display: block;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f0f3e3;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+
+  .cardRight {
+    direction: rtl;
+  }
+
+  .card-payment{
+    display: block;
+  }
+
+  .card-payment:hover{
+    background-color: rgb(26, 153, 132);
+    cursor: pointer;
+  }
+
+  .card-button {
+    width: 100%;
+  }
+
+
+  .card-payment {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    padding: 8px 0;
+    border: none;
+    background-color: rgb(37, 185, 160);
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+
+  }
+
+  
