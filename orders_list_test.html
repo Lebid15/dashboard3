@@ -1,0 +1,143 @@
+{% extends "_base.html" %}
+{% load static %}
+{% block title %}طلبات الجوال{% endblock title %}
+{% block header %}طلبات الجوال{% endblock header %}
+
+{% block content %}
+<main>
+    <div class="orderSection">
+        <div class="orderRow orderRowHead tableHidden">
+            <div class="tableHidden">الرقم</div>
+            <div>الشركة</div>
+            <div class="product">المنتج<p class="playerID">ورقم الجوال</p>
+            </div>
+            <div class="tableHidden">رقم الجوال</div>
+            <div class="price">شراء<p class="playerID">ومبيع</p>
+            </div>
+            <div class="tableHidden">مبيع</div>
+            <div class="tableHidden">ربح</div>
+            <div class="tableHidden">ملاحظة</div>
+            <div>الحالة</div>
+            <div>التاربخ والوقت</div>
+        </div>
+
+        {% for order in orders %}
+
+
+        <div class="orderRow {{ order.status }}">
+            <div style="width: 5px;" class="number1">{{ order.pk }}</div>
+            {% if order.plan.operator == 'turkcell' %}
+            <div class="orderRowImg"><img src="{% static 'mobile/images/Turkcell.jpg' %}" alt="turkcell logo"
+                    style="width: 30px; border-radius: 10px; margin-top: 10px;"></div>
+            {% elif order.plan.operator == 'vodafone' %}
+            <div class="orderRowImg"><img src="{% static 'mobile/images/Vodafone.jpg' %}" alt="vodafone logo"
+                    style="width: 30px; border-radius: 10px; margin-top: 10px;"></div>
+            {% elif order.plan.operator == 'avea' %}
+            <div class="orderRowImg"><img src="{% static 'mobile/images/TurkTelekom.png' %}" alt="TurkTelekom logo"
+                    style="width: 30px; border-radius: 10px; margin-top: 10px;"></div>
+            {% elif order.plan.operator == 'callback' and order.plan.tip == 'syriatel' %}
+            <div class="orderRowImg"><img src="{% static 'mobile/images/syriatel.png' %}" alt="syriatel logo"
+                    style="width: 30px; border-radius: 10px; margin-top: 10px;"></div>
+            {% elif order.plan.operator == 'callback' and order.plan.tip == 'mtn' %}
+            <div class="orderRowImg"><img src="{% static 'mobile/images/mtn.png' %}" alt="mtn logo"
+                    style="width: 30px; border-radius: 10px; margin-top: 10px;"></div>
+            {% endif %}
+            <div class="number2">
+                <p>{{ order.plan.name }}</p>
+                <p class="playerID">{{ order.phone_num }}</p>
+            </div>
+            <div class="number3">{{ order.phone_num }}</div>
+            <div class="number4">
+                <p>{{ order.price_paid }}</p>
+                <p class="playerID">{{ order.price_to_sell }}</p>
+                <p class="playerID">{{ order.profit }}</p>
+            </div>
+            <div class="number5">{{ order.price_to_sell }}</div>
+            <div class="number6">{{ order.profit }}</div>
+            <div class="number7">----------</div>
+
+            <div class="number10">
+
+                {% if order.status == 'P' %}
+                <img src="{% static 'images/loading-gif.gif'' %}" alt="loading gif" style="width: 25px;">
+
+
+
+                {% elif order.status == 'C' %}
+
+                <span class="material-symbols-outlined">
+                    done_outline
+                </span>
+
+                {% elif order.status == 'X' %}
+
+                <span class="material-symbols-outlined">
+                    cancel
+                </span>
+
+                {% elif order.status == 'Z' %}
+
+                <img src="{% static 'images/loading-gif.gif'' %}" alt="loading gif" style="width: 25px;">
+
+                {% endif %}
+            </div>
+
+            <div>
+
+                <div class="number9">
+                    <div>{{ order.purchase_date|date:"Y-m-d" }}</div>
+                    <div>{{ order.purchase_date|date:"H:i" }}</div>
+                    <button onclick="location.href='{% url 'order_detail' order.pk %}'">طباعة</button>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+    </div>
+
+    <div class="pagination">
+        <ul class="step-links">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-chevron-left"
+                        aria-hidden="true"></i></a></li>
+            {% else %}
+            <li class="disabled"><span><i class="fa fa-chevron-left" aria-hidden="true"></i></span></li>
+            {% endif %}
+
+            {% if page_obj.number|add:'-4' > 1 %}
+            <li><a href="?page={{ page_obj.number|add:'-5' }}">&hellip;</a></li>
+            {% endif %}
+
+            {% for i in page_obj.paginator.page_range %}
+            {% if page_obj.number == i %}
+            <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+            {% elif i > page_obj.number|add:'-5' and i < page_obj.number|add:'5' %} <li><a href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+                {% endfor %}
+
+                {% if page_obj.paginator.num_pages > page_obj.number|add:'4' %}
+                <li><a href="?page={{ page_obj.number|add:'5' }}">&hellip;</a></li>
+                {% endif %}
+
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-chevron-right"
+                            aria-hidden="true"></i></a></li>
+                {% else %}
+                <li class="disabled"><span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></li>
+                {% endif %}
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+</main>
+{% endblock content %}
