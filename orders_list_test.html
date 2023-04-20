@@ -80,15 +80,11 @@
                 {% endif %}
             </div>
 
-            <div>
 
-                <div class="number9">
-                    <div>{{ order.purchase_date|date:"Y-m-d" }}</div>
-                    <div>{{ order.purchase_date|date:"H:i" }}</div>
-                     <button onclick="location.href='{% url 'game_order_detail' order.pk %}'">طباعة</button>
-                </div>
-
+            <div class="number9">
+                <div><span>{{ order.purchase_date|date:"Y-m-d" }}</span> <span>{{ order.purchase_date|date:"H:i" }}</span> <span class="orderPrint number3"><button onclick="location.href='{% url 'game_order_detail' order.pk %}'">طباعة</button></span></div>
             </div>
+
 
         </div>
 
@@ -222,15 +218,11 @@
                 {% endif %}
             </div>
 
-            <div>
 
-                <div class="number9">
-                    <div>{{ fatura.purchase_date|date:"Y-m-d" }}</div>
-                    <div>{{ fatura.purchase_date|date:"H:i" }}</div>
-                    <button onclick="location.href='{% url 'fatura_order_detail' fatura.pk %}'">طباعة</button>
-                </div>
-
+            <div class="number9">
+                <div><span>{{ fatura.purchase_date|date:"Y-m-d" }}</span> <span>{{ fatura.purchase_date|date:"H:i" }}</span> <span class="orderPrint number3"><button onclick="location.href='{% url 'fatura_order_detail' fatura.pk %}'">طباعة</button></span></div>
             </div>
+
 
         </div>
 
