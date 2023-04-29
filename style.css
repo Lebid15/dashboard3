@@ -115,7 +115,7 @@ body {
 .sidebar-menu a {
     display: flex;
     padding-right: 1rem;
-    padding-top: 1rem;
+    padding-top: 0.3rem;
     padding-bottom: 1rem;
     font-size: 1rem;
     align-items: center;
@@ -461,6 +461,13 @@ main .notes {
 
 .orderPrint {
     margin-bottom: -8px;
+    border: none;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .playerID {
@@ -775,7 +782,7 @@ main .notes {
 .turkcellProductCard {
     display: inline;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: var(--balance-bg);
+    background-color: rgb(255, 255, 134);
     margin: 0.2rem 0.3rem;
     font-size: 0.9rem;
     cursor: pointer;
@@ -793,7 +800,7 @@ main .notes {
     width: 6rem;
     color: white;
     padding: 0.5rem;
-    background: #7c84fd;
+    background: #a8b90c;
     border-radius: 10px;
     text-align: center;
 }
