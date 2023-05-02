@@ -270,6 +270,27 @@ main {
     color: var(--black-white-mode-text);
 }
 
+.news {
+  text-align: center;
+  color: white;
+  padding: 5px 0;
+  background-color: rgb(255, 73, 73);
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+
+
 main .notes {
     margin-top: 70px;
     letter-spacing: .5px;
