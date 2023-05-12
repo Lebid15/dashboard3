@@ -274,10 +274,14 @@ main {
   text-align: center;
   color: white;
   padding: 5px 0;
-  background-color: rgb(255, 73, 73);
+  /* background-color: rgb(255, 73, 73); */
   animation-name: slide-in;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+}
+
+.reklam {
+    max-width: 100%;
 }
 
 @keyframes slide-in {
