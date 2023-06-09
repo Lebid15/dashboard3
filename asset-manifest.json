@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dashboard3/frontahla/static/css/main.0ee578b9.css",
+    "main.js": "/dashboard3/frontahla/static/js/main.4292ef94.js",
+    "static/media/ahlaLG7.png": "/dashboard3/frontahla/static/media/ahlaLG7.a52c5c8f6fbb473755a4.png",
+    "index.html": "/dashboard3/frontahla/index.html",
+    "main.0ee578b9.css.map": "/dashboard3/frontahla/static/css/main.0ee578b9.css.map",
+    "main.4292ef94.js.map": "/dashboard3/frontahla/static/js/main.4292ef94.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ee578b9.css",
+    "static/js/main.4292ef94.js"
+  ]
+}
